@@ -10,14 +10,10 @@
             margin: 0;
             padding: 0;
             line-height: 1.6;
-            background-image: url('Dream.jpg'); /* Pfad zum Hintergrundbild */
-            background-size: cover; /* Bild auf die gesamte Fläche anpassen */
-            background-repeat: no-repeat; /* Bild nicht wiederholen */
-            background-attachment: fixed; /* Bild bleibt fixiert beim Scrollen */
-            background-position: center; /* Bild zentrieren */
+            background-color: #f4f4f4;
         }
         header {
-            background: #333; 
+            background: #FFD700; /* Gold-Gelb */
             color: #fff;
             padding: 10px;
             text-align: center;
@@ -52,21 +48,25 @@
             padding: 20px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         }
-        .cta {
-            margin-top: 20px;
-            text-align: center;
+        .accordion {
+            cursor: pointer;
+            padding: 10px;
+            width: 100%;
+            border: none;
+            text-align: left;
+            outline: none;
+            font-size: 1.2em;
+            transition: background-color 0.3s;
         }
-        .cta a {
-            display: inline-block;
-            padding: 10px 20px;
-            margin: 10px 0;
-            background: #333;
-            color: #fff;
-            text-decoration: none;
-            border-radius: 5px;
+        .accordion:hover, .active {
+            background-color: #ccc;
         }
-        .cta a:hover {
-            background: #555;
+        .panel {
+            padding: 0 18px;
+            background-color: white;
+            display: none;
+            overflow: hidden;
+            transition: max-height 0.2s ease-out;
         }
     </style>
 </head>
@@ -80,9 +80,24 @@
             <h2>Willkommen bei der Kuckucksgemeinschaft</h2>
             <p>
                 Hi, wir sind ein neuer Verein, der am 07.06.2024 gegründet wurde und sich der Gemeinschaft in Altenritte verpflichtet hat.<br><br>
-
                 Da wir uns gerade im Aufbau befinden, muss das hier fürs Erste reichen. \(^-^)/
             </p>
+            
+            <button class="accordion">Abschnitt 1</button>
+            <div class="panel">
+                <p>Dies ist der Inhalt des ersten Abschnitts.</p>
+            </div>
+            
+            <button class="accordion">Abschnitt 2</button>
+            <div class="panel">
+                <p>Dies ist der Inhalt des zweiten Abschnitts.</p>
+            </div>
+            
+            <button class="accordion">Abschnitt 3</button>
+            <div class="panel">
+                <p>Dies ist der Inhalt des dritten Abschnitts.</p>
+            </div>
+            
             <p>
                 Falls Sie uns bereits jetzt durch Spenden oder als Mitglied unterstützen möchten, melden Sie sich bitte unter <a href="mailto:kuckucksgemeinschaft@altenritte.com">kuckucksgemeinschaft@altenritte.com</a>.
             </p>
@@ -91,5 +106,21 @@
             </div>
         </div>
     </main>
+    <script>
+        var acc = document.getElementsByClassName("accordion");
+        var i;
+
+        for (i = 0; i < acc.length; i++) {
+            acc[i].addEventListener("click", function() {
+                this.classList.toggle("active");
+                var panel = this.nextElementSibling;
+                if (panel.style.display === "block") {
+                    panel.style.display = "none";
+                } else {
+                    panel.style.display = "block";
+                }
+            });
+        }
+    </script>
 </body>
 </html>
