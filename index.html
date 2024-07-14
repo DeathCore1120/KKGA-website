@@ -101,6 +101,15 @@
         .active .accordion-content {
             display: block;
         }
+        footer {
+            background: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
     </style>
 </head>
 <body>
@@ -151,16 +160,48 @@
                         </p>
                     </div>
                 </div>
+                <div class="accordion-item">
+                    <div class="accordion-header">
+                        <span>Über uns</span>
+                        <span>+</span>
+                    </div>
+                    <div class="accordion-content">
+                        <p>
+                            Die Kuckucksgemeinschaft ist ein Verein, der sich der Förderung der Gemeinschaft und des kulturellen Lebens in Altenritte verschrieben hat.
+                        </p>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <div class="accordion-header">
+                        <span>Mitgliedschaft</span>
+                        <span>+</span>
+                    </div>
+                    <div class="accordion-content">
+                        <p>
+                            Werden Sie Mitglied und unterstützen Sie unsere Arbeit. Zusammen können wir viel erreichen.
+                        </p>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <div class="accordion-header">
+                        <span>Spenden</span>
+                        <span>+</span>
+                    </div>
+                    <div class="accordion-content">
+                        <p>
+                            Ihre Spenden helfen uns, unsere Ziele zu verwirklichen und die Gemeinschaft zu stärken. Vielen Dank für Ihre Unterstützung!
+                        </p>
+                    </div>
+                </div>
             </div>
         </div>
     </main>
+    <footer>
+        &copy; 2024 Kuckucksgemeinschaft Altenritte e. V.
+    </footer>
     <script>
         document.querySelectorAll('.accordion-header').forEach(header => {
             header.addEventListener('click', function() {
-                const activeItem = document.querySelector('.accordion-item.active');
-                if (activeItem && activeItem !== this.parentElement) {
-                    activeItem.classList.remove('active');
-                }
                 this.parentElement.classList.toggle('active');
             });
         });
