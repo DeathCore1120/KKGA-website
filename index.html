@@ -44,6 +44,7 @@
         }
         main {
             padding: 20px;
+            position: relative;
         }
         .carousel {
             max-width: 800px;
@@ -63,18 +64,24 @@
             box-sizing: border-box;
         }
         .carousel-controls {
-            display: flex;
-            justify-content: space-between;
             position: absolute;
             top: 50%;
             width: 100%;
+            display: flex;
+            justify-content: space-between;
             transform: translateY(-50%);
+            pointer-events: none;
         }
         .carousel-control {
-            background: #333;
+            background: rgba(51, 51, 51, 0.8); /* Halbtransparentes Schwarz */
             color: #fff;
             padding: 10px;
             cursor: pointer;
+            pointer-events: auto;
+            transition: background 0.3s ease;
+        }
+        .carousel-control:hover {
+            background: rgba(51, 51, 51, 1); /* Volltransparenz beim Hover */
         }
     </style>
 </head>
