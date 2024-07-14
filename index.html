@@ -149,15 +149,17 @@
                         </p>
                     </div>
                 </div>
-                <div class="accordion-item">
+                <div class="accordion-item" id="protected-item">
                     <div class="accordion-header">
-                        <span>Kontakt</span>
+                        <span>Geschützter Bereich</span>
                         <span>+</span>
                     </div>
                     <div class="accordion-content">
-                        <p>
-                            Sie können uns auch über unsere Social-Media-Kanäle erreichen oder direkt eine E-Mail senden.
-                        </p>
+                        <input type="password" id="password" placeholder="Passwort eingeben" />
+                        <button onclick="checkPassword()">Bestätigen</button>
+                        <div id="protected-content" style="display:none;">
+                            <p>Dies ist der geschützte Inhalt, der nur nach Eingabe des richtigen Passworts angezeigt wird.</p>
+                        </div>
                     </div>
                 </div>
                 <div class="accordion-item">
@@ -205,6 +207,18 @@
                 this.parentElement.classList.toggle('active');
             });
         });
+
+        function checkPassword() {
+            const passwordInput = document.getElementById('password');
+            const protectedContent = document.getElementById('protected-content');
+            const correctPassword = 'deinPasswort'; // Setze hier das gewünschte Passwort
+
+            if (passwordInput.value === correctPassword) {
+                protectedContent.style.display = 'block';
+            } else {
+                alert('Falsches Passwort. Bitte versuchen Sie es erneut.');
+            }
+        }
     </script>
 </body>
 </html>
