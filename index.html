@@ -62,15 +62,17 @@
         .carousel-item {
             min-width: 100%;
             box-sizing: border-box;
+            flex-shrink: 0;
         }
         .carousel-controls {
-            position: absolute;
-            top: 50%;
-            width: 100%;
             display: flex;
             justify-content: space-between;
+            position: absolute;
+            top: 50%;
+            width: calc(100% + 40px); /* Erweitert die Breite über die Box hinaus */
             transform: translateY(-50%);
             pointer-events: none;
+            left: -20px; /* Verschiebt die Steuerungen nach links */
         }
         .carousel-control {
             background: rgba(51, 51, 51, 0.8); /* Halbtransparentes Schwarz */
@@ -79,6 +81,7 @@
             cursor: pointer;
             pointer-events: auto;
             transition: background 0.3s ease;
+            z-index: 10; /* Stellt sicher, dass die Steuerungen über dem Inhalt liegen */
         }
         .carousel-control:hover {
             background: rgba(51, 51, 51, 1); /* Volltransparenz beim Hover */
