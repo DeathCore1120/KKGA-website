@@ -74,7 +74,7 @@
             padding: 10px;
             text-align: center;
             display: flex;
-            justify-content: space-between;
+            justify-content: center; /* Zentrieren des Logos */
             align-items: center;
             flex-wrap: wrap;
         }
@@ -132,6 +132,18 @@
         .side-menu ul li a:hover {
             background: #FFA500;
         }
+        .menu-toggle {
+            position: fixed;
+            top: 50%;
+            right: 0;
+            transform: translateY(-50%);
+            background: #333;
+            color: #fff;
+            padding: 10px;
+            border-radius: 10px 0 0 10px;
+            cursor: pointer;
+            z-index: 10001;
+        }
     </style>
 </head>
 <body>
@@ -172,6 +184,9 @@
             <li><a href="#datenschutz">Datenschutz</a></li>
         </ul>
     </div>
+    <div class="menu-toggle" id="menu-toggle">
+        Menü
+    </div>
     <script>
         // Preloader Script
         let percent = 0;
@@ -188,6 +203,16 @@
             document.getElementById('preloader').style.display = 'none';
             document.getElementById('side-menu').style.display = 'block'; // Zeige das Menü nach dem Preloader
         }
+
+        // Toggle Menu Script
+        document.getElementById('menu-toggle').addEventListener('click', function() {
+            let sideMenu = document.getElementById('side-menu');
+            if (sideMenu.style.display === 'block') {
+                sideMenu.style.display = 'none';
+            } else {
+                sideMenu.style.display = 'block';
+            }
+        });
     </script>
 </body>
 </html>
