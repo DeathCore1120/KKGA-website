@@ -78,19 +78,18 @@
             display: flex;
             justify-content: center; /* Zentrieren von Logo und Text */
             align-items: center;
-            flex-direction: column; /* Spaltenorientierung für zentrierte Anordnung */
         }
         header h1 {
-            margin: 10px 0; /* Abstand oben und unten */
-            font-size: 36px; /* Größere Schriftgröße im Header */
+            margin: 0; /* Entferne den oberen und unteren Abstand */
+            font-size: 24px; /* Schriftgröße im Header */
         }
         header img {
-            height: 80px; /* Größe des Logos im Header */
-            margin-bottom: 10px; /* Abstand zum Text */
+            height: 40px; /* Größe des Logos im Header */
+            margin-right: 10px; /* Abstand zwischen Logo und Text */
         }
         main {
             padding: 20px;
-            position: relative;
+            text-align: center; /* Zentrieren des Body-Texts */
         }
         .container {
             max-width: 800px;
@@ -103,7 +102,7 @@
             position: relative;
         }
         .logo-container {
-            text-align: center; /* Zentrieren des Logos */
+            text-align: left; /* Links ausrichten für das Logo */
             margin-bottom: 20px; /* Abstand zum Text */
         }
         .logo-container img {
@@ -173,8 +172,8 @@
     <header>
         <div class="logo-container">
             <img src="Kuckuck5.png" alt="Kuckucksgemeinschaft Logo">
+            <h1>Kuckucksgemeinschaft Altenritte e. V.</h1>
         </div>
-        <h1>Kuckucksgemeinschaft Altenritte e. V.</h1>
     </header>
     <main>
         <div class="container">
@@ -186,6 +185,9 @@
 
             <h2 id="ueber-uns">Über uns</h2>
             <p>Hier könnte der Text über uns stehen...</p>
+
+            <h2 id="kontakt">Kontakt</h2>
+            <p>Hier könnte der Text zum Kontakt stehen...</p>
 
             <h2 id="mitgliedschaft">Mitgliedschaft</h2>
             <p>Hier könnte der Text zur Mitgliedschaft stehen...</p>
