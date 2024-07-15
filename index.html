@@ -82,6 +82,9 @@
             height: 80px;
             padding-right: 10px;
         }
+        img {
+            max-width: 100%; height: auto; 
+        }
         main {
             padding: 20px;
             position: relative;
@@ -224,7 +227,7 @@
                 document.getElementById('start-button').classList.add('show');
                 
             }
-        }, 80); // Ladedauer von etwa 8 Sekunden für 100%
+        }, 20); // Ladedauer von etwa 8 Sekunden für 100%
 
        function start() {
             document.getElementById('preloader').style.display = 'none';
