@@ -55,7 +55,7 @@
             border: none;
             border-radius: 5px;
             cursor: pointer;
-            display: none; /* Verstecke den Menü-Button initial */
+            display: none; /* Verstecke den Start-Button initial */
             margin-top: 20px; /* Abstand zum Prozentwert */
             border: 2px solid #fff; /* Umrandung */
         }
@@ -151,7 +151,6 @@
     <div id="preloader">
         <div id="loading-text">Ladevorgang...</div>
         <div id="loading-percent">0%</div>
-        <button onclick="start()" id="start-button">HIER GEHT ES LOS</button>
     </div>
     <header>
         <img src="Kuckuck5.png" alt="Kuckucksgemeinschaft Logo">
@@ -163,6 +162,7 @@
             <section id="verein"><h2>Verein</h2><p>Inhalte über den Verein...</p></section>
             <section id="veranstaltungen"><h2>Veranstaltungen</h2><p>Inhalte über Veranstaltungen...</p></section>
             <section id="ueber-uns"><h2>Über uns</h2><p>Inhalte über uns...</p></section>
+            <section id="kontakt"><h2>Kontakt</h2><p>Kontaktinformationen...</p></section>
             <section id="mitgliedschaft"><h2>Mitgliedschaft</h2><p>Inhalte über die Mitgliedschaft...</p></section>
             <section id="spenden"><h2>Spenden</h2><p>Inhalte über Spenden...</p></section>
             <section id="gallerie"><h2>Gallerie</h2><p>Inhalte über die Gallerie...</p></section>
@@ -178,6 +178,7 @@
             <li><a href="#verein">Verein</a></li>
             <li><a href="#veranstaltungen">Veranstaltungen</a></li>
             <li><a href="#ueber-uns">Über uns</a></li>
+            <li><a href="#kontakt">Kontakt</a></li>
             <li><a href="#mitgliedschaft">Mitgliedschaft</a></li>
             <li><a href="#spenden">Spenden</a></li>
             <li><a href="#gallerie">Gallerie</a></li>
@@ -200,11 +201,6 @@
                 document.getElementById('menu-toggle').style.display = 'block'; // Zeige den Menü-Button nach dem Preloader
             }
         }, 80); // Ladedauer von etwa 8 Sekunden für 100%
-
-        function start() {
-            document.getElementById('preloader').style.display = 'none';
-            document.getElementById('side-menu').style.display = 'block'; // Zeige das Menü nach dem Preloader
-        }
 
         // Toggle Menu Script
         document.getElementById('menu-toggle').addEventListener('click', function() {
