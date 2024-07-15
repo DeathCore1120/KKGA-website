@@ -15,6 +15,10 @@
             background-repeat: no-repeat;
             background-attachment: fixed;
             background-position: center;
+            transition: background-color 0.5s ease; /* Übergangsanimation für Hintergrundfarbe */
+        }
+        .dark-background {
+            background-color: #333; /* Dunkler Hintergrund */
         }
         #preloader {
             position: fixed;
@@ -158,8 +162,8 @@
         <button onclick="start()" id="start-button">HIER GEHT ES LOS</button>
     </div>
     <header>
-        <h1>Kuckucksgemeinschaft Altenritte e. V. </h1>
         <img src="Kuckuck5.png" alt="Kuckucksgemeinschaft Logo">
+        <h1>Kuckucksgemeinschaft Altenritte e. V. </h1>
     </header>
     <main>
         <div class="container">
@@ -225,13 +229,12 @@
             if (percent >= 100) {
                 clearInterval(interval);
                 document.getElementById('start-button').classList.add('show');
-                
             }
         }, 20); // Ladedauer von etwa 8 Sekunden für 100%
 
-       function start() {
+        function start() {
             document.getElementById('preloader').style.display = 'none';
-           document.getElementById('menu-toggle').style.display = 'block'; // Zeige den Menü-Button nach dem Preloader
+            document.getElementById('menu-toggle').style.display = 'block'; // Zeige den Menü-Button nach dem Preloader
         }
 
         // Menu Toggle Script
@@ -243,6 +246,19 @@
                 sideMenu.style.display = 'block';
             } else {
                 sideMenu.style.display = 'none';
+            }
+        });
+
+        // Scroll Script
+        window.addEventListener('scroll', function() {
+            const body = document.body;
+            const scrollY = window.scrollY;
+            const transitionPoint = 300; // Punkt, ab dem der Hintergrund wechselt
+
+            if (scrollY >= transitionPoint) {
+                body.classList.add('dark-background');
+            } else {
+                body.classList.remove('dark-background');
             }
         });
     </script>
