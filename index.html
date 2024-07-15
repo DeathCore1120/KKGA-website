@@ -22,7 +22,7 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background: url('Dream2.png') #333 center no-repeat; /* Änderung des Hintergrundbilds im Preloader */
+            background: url('Dream2.png') #333 center no-repeat;
             display: flex;
             justify-content: center;
             align-items: center;
@@ -318,7 +318,7 @@
                 clearInterval(interval);
                 document.getElementById('start-button').classList.add('show');
             }
-        }, 1000); // Verdoppelung der Dauer auf 1000ms (1 Sekunde)
+        }, 80); // Ladedauer von etwa 8 Sekunden für 100%
 
         function start() {
             document.getElementById('preloader').style.display = 'none';
