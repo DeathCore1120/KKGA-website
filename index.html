@@ -201,14 +201,15 @@
             }
         }, 80); // Ladedauer von etwa 8 Sekunden für 100%
 
-        function start() {
+       function start() {
             document.getElementById('preloader').style.display = 'none';
-            document.getElementById('side-menu').style.display = 'block'; // Zeige das Menü nach dem Preloader
         }
 
-        // Toggle Menu Script
-        document.getElementById('menu-toggle').addEventListener('click', function() {
-            let sideMenu = document.getElementById('side-menu');
+        // Menu Toggle Script
+        const menuToggle = document.getElementById('menu-toggle');
+        const sideMenu = document.getElementById('side-menu');
+
+        menuToggle.addEventListener('click', function() {
             if (sideMenu.style.display === 'none' || sideMenu.style.display === '') {
                 sideMenu.style.display = 'block';
             } else {
