@@ -75,13 +75,20 @@
             text-align: center;
             position: relative;
             z-index: 1000;
+            display: flex;
+            justify-content: flex-start; /* Logo und Text links ausrichten */
+            align-items: center;
         }
         header h1 {
             margin: 0;
             font-size: 36px; /* Größere Schriftgröße im Header */
-            text-align: center;
+            text-align: left; /* Text links ausrichten */
             display: inline-block; /* Erlaubt Inline-Block-Elemente nebeneinander */
-            margin-bottom: 20px; /* Abstand nach unten für das Logo */
+            margin-left: 20px; /* Abstand zwischen Logo und Text */
+        }
+        header img {
+            height: 80px; /* Größe des Logos im Header */
+            margin-right: 20px; /* Abstand zwischen Logo und Text */
         }
         main {
             padding: 20px;
@@ -168,13 +175,11 @@
         <button onclick="start()" id="start-button">HIER GEHT ES LOS</button>
     </div>
     <header>
+        <img src="Kuckuck5.png" alt="Kuckucksgemeinschaft Logo">
         <h1>Kuckucksgemeinschaft Altenritte e. V.</h1>
     </header>
     <main>
         <div class="container">
-            <div class="logo-container">
-                <img src="Kuckuck5.png" alt="Kuckucksgemeinschaft Logo">
-            </div>
             <h2>Willkommen auf der Homepage der Kuckucksgemeinschaft Altenritte e. V.</h2>
             <p>Hier könnte der Inhalt der Homepage stehen...</p>
         </div>
