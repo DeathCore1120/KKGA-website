@@ -103,6 +103,34 @@
             width: 100%;
             bottom: 0;
         }
+        .side-menu {
+            position: fixed;
+            top: 50%;
+            right: 0;
+            transform: translateY(-50%);
+            background: rgba(51, 51, 51, 0.8);
+            padding: 20px;
+            border-radius: 10px 0 0 10px;
+            z-index: 10000;
+        }
+        .side-menu ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        .side-menu ul li {
+            margin-bottom: 15px;
+        }
+        .side-menu ul li a {
+            color: #fff;
+            text-decoration: none;
+            padding: 10px 20px;
+            display: block;
+            border-radius: 5px;
+        }
+        .side-menu ul li a:hover {
+            background: #FFA500;
+        }
     </style>
 </head>
 <body>
@@ -118,11 +146,31 @@
         <div class="container">
             <h1>Kuckucksgemeinschaft Altenritte e. V.</h1>
             <p>Willkommen auf der Seite der Kuckucksgemeinschaft Altenritte e. V.</p>
+            <section id="verein"><h2>Verein</h2><p>Inhalte über den Verein...</p></section>
+            <section id="veranstaltungen"><h2>Veranstaltungen</h2><p>Inhalte über Veranstaltungen...</p></section>
+            <section id="ueber-uns"><h2>Über uns</h2><p>Inhalte über uns...</p></section>
+            <section id="mitgliedschaft"><h2>Mitgliedschaft</h2><p>Inhalte über die Mitgliedschaft...</p></section>
+            <section id="spenden"><h2>Spenden</h2><p>Inhalte über Spenden...</p></section>
+            <section id="gallerie"><h2>Gallerie</h2><p>Inhalte über die Gallerie...</p></section>
+            <section id="impressum"><h2>Impressum</h2><p>Inhalte über das Impressum...</p></section>
+            <section id="datenschutz"><h2>Datenschutz</h2><p>Inhalte über den Datenschutz...</p></section>
         </div>
     </main>
     <footer>
         &copy; 2024 Kuckucksgemeinschaft Altenritte e. V.
     </footer>
+    <div class="side-menu">
+        <ul>
+            <li><a href="#verein">Verein</a></li>
+            <li><a href="#veranstaltungen">Veranstaltungen</a></li>
+            <li><a href="#ueber-uns">Über uns</a></li>
+            <li><a href="#mitgliedschaft">Mitgliedschaft</a></li>
+            <li><a href="#spenden">Spenden</a></li>
+            <li><a href="#gallerie">Gallerie</a></li>
+            <li><a href="#impressum">Impressum</a></li>
+            <li><a href="#datenschutz">Datenschutz</a></li>
+        </ul>
+    </div>
     <script>
         // Preloader Script
         let percent = 0;
