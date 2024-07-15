@@ -197,12 +197,13 @@
             if (percent >= 100) {
                 clearInterval(interval);
                 document.getElementById('start-button').classList.add('show');
-                document.getElementById('menu-toggle').style.display = 'block'; // Zeige den Menü-Button nach dem Preloader
+                
             }
         }, 80); // Ladedauer von etwa 8 Sekunden für 100%
 
        function start() {
             document.getElementById('preloader').style.display = 'none';
+           document.getElementById('menu-toggle').style.display = 'block'; // Zeige den Menü-Button nach dem Preloader
         }
 
         // Menu Toggle Script
