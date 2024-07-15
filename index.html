@@ -55,7 +55,7 @@
             border: none;
             border-radius: 5px;
             cursor: pointer;
-            display: none;
+            display: none; /* Verstecke den Menü-Button initial */
             margin-top: 20px; /* Abstand zum Prozentwert */
             border: 2px solid #fff; /* Umrandung */
         }
@@ -143,6 +143,7 @@
             border-radius: 10px 0 0 10px;
             cursor: pointer;
             z-index: 10001;
+            display: none; /* Verstecke den Menü-Button initial */
         }
     </style>
 </head>
@@ -196,6 +197,7 @@
             if (percent >= 100) {
                 clearInterval(interval);
                 document.getElementById('start-button').classList.add('show');
+                document.getElementById('menu-toggle').style.display = 'block'; // Zeige den Menü-Button nach dem Preloader
             }
         }, 80); // Ladedauer von etwa 8 Sekunden für 100%
 
@@ -207,10 +209,10 @@
         // Toggle Menu Script
         document.getElementById('menu-toggle').addEventListener('click', function() {
             let sideMenu = document.getElementById('side-menu');
-            if (sideMenu.style.display === 'block') {
-                sideMenu.style.display = 'none';
-            } else {
+            if (sideMenu.style.display === 'none' || sideMenu.style.display === '') {
                 sideMenu.style.display = 'block';
+            } else {
+                sideMenu.style.display = 'none';
             }
         });
     </script>
