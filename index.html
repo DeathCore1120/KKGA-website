@@ -81,14 +81,7 @@
             font-size: 36px; /* Größere Schriftgröße im Header */
             text-align: center;
             display: inline-block; /* Erlaubt Inline-Block-Elemente nebeneinander */
-        }
-        header img {
-            height: 80px;
-            position: absolute;
-            right: 10px;
-            top: 50%;
-            transform: translateY(-50%);
-            margin-left: 10px; /* Ein wenig Abstand zum Text */
+            margin-bottom: 20px; /* Abstand nach unten für das Logo */
         }
         main {
             padding: 20px;
@@ -102,6 +95,18 @@
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
             margin-top: 50px; /* Space for scrolling */
             text-align: center; /* Zentrieren des Textes */
+            position: relative;
+        }
+        .logo-container {
+            position: absolute;
+            top: -80px; /* Negative Positionierung für das Logo über dem Container */
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        .logo-container img {
+            height: 150px; /* Größe des Logos */
+            border-radius: 10px; /* Runde Ecken für das Logo */
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* Schatten für das Logo */
         }
         footer {
             background: #333;
@@ -164,10 +169,12 @@
     </div>
     <header>
         <h1>Kuckucksgemeinschaft Altenritte e. V.</h1>
-        <img src="Kuckuck5.png" alt="Kuckucksgemeinschaft Logo">
     </header>
     <main>
         <div class="container">
+            <div class="logo-container">
+                <img src="Kuckuck5.png" alt="Kuckucksgemeinschaft Logo">
+            </div>
             <h2>Willkommen auf der Homepage der Kuckucksgemeinschaft Altenritte e. V.</h2>
             <p>Hier könnte der Inhalt der Homepage stehen...</p>
         </div>
@@ -181,7 +188,7 @@
             <li><a href="#verein">Verein</a></li>
             <li><a href="#veranstaltungen">Veranstaltungen</a></li>
             <li><a href="#ueber-uns">Über uns</a></li>
-            <li><a href="#kontakt">Kontakt</a></li> <!-- Neuer Punkt Kontakt -->
+            <li><a href="#kontakt">Kontakt</a></li>
             <li><a href="#mitgliedschaft">Mitgliedschaft</a></li>
             <li><a href="#spenden">Spenden</a></li>
             <li><a href="#gallerie">Gallerie</a></li>
