@@ -73,23 +73,17 @@
             color: #fff;
             padding: 10px;
             text-align: center;
-            position: relative;
-            z-index: 1000;
             display: flex;
-            justify-content: center; /* Zentrieren von Logo und Text */
+            justify-content: center; /* Zentrieren des Logos */
             align-items: center;
-        }
-        header h1 {
-            margin: 0; /* Entferne den oberen und unteren Abstand */
-            font-size: 24px; /* Schriftgröße im Header */
+            flex-wrap: wrap;
         }
         header img {
-            height: 40px; /* Größe des Logos im Header */
-            margin-right: 10px; /* Abstand zwischen Logo und Text */
+            height: 80px;
         }
         main {
             padding: 20px;
-            text-align: center; /* Zentrieren des Body-Texts */
+            position: relative;
         }
         .container {
             max-width: 800px;
@@ -98,17 +92,7 @@
             padding: 20px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
             margin-top: 50px; /* Space for scrolling */
-            text-align: left; /* Text linksbündig ausrichten */
-            position: relative;
-        }
-        .logo-container {
-            text-align: left; /* Links ausrichten für das Logo */
-            margin-bottom: 20px; /* Abstand zum Text */
-        }
-        .logo-container img {
-            height: 150px; /* Größe des Logos */
-            border-radius: 10px; /* Runde Ecken für das Logo */
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* Schatten für das Logo */
+            text-align: center; /* Zentrieren des Textes */
         }
         footer {
             background: #333;
@@ -170,39 +154,20 @@
         <button onclick="start()" id="start-button">HIER GEHT ES LOS</button>
     </div>
     <header>
-        <div class="logo-container">
-            <img src="Kuckuck5.png" alt="Kuckucksgemeinschaft Logo">
-            <h1>Kuckucksgemeinschaft Altenritte e. V.</h1>
-        </div>
+        <img src="Kuckuck5.png" alt="Kuckucksgemeinschaft Logo">
     </header>
     <main>
         <div class="container">
-            <h2 id="verein">Verein</h2>
-            <p>Hier könnte der Text zum Verein stehen...</p>
-
-            <h2 id="veranstaltungen">Veranstaltungen</h2>
-            <p>Hier könnte der Text zu den Veranstaltungen stehen...</p>
-
-            <h2 id="ueber-uns">Über uns</h2>
-            <p>Hier könnte der Text über uns stehen...</p>
-
-            <h2 id="kontakt">Kontakt</h2>
-            <p>Hier könnte der Text zum Kontakt stehen...</p>
-
-            <h2 id="mitgliedschaft">Mitgliedschaft</h2>
-            <p>Hier könnte der Text zur Mitgliedschaft stehen...</p>
-
-            <h2 id="spenden">Spenden</h2>
-            <p>Hier könnte der Text zu Spenden stehen...</p>
-
-            <h2 id="gallerie">Gallerie</h2>
-            <p>Hier könnte der Text zur Gallerie stehen...</p>
-
-            <h2 id="impressum">Impressum</h2>
-            <p>Hier könnte der Text zum Impressum stehen...</p>
-
-            <h2 id="datenschutz">Datenschutz</h2>
-            <p>Hier könnte der Text zum Datenschutz stehen...</p>
+            <h1>Kuckucksgemeinschaft Altenritte e. V.</h1>
+            <p>Willkommen auf der Seite der Kuckucksgemeinschaft Altenritte e. V.</p>
+            <section id="verein"><h2>Verein</h2><p>Inhalte über den Verein...</p></section>
+            <section id="veranstaltungen"><h2>Veranstaltungen</h2><p>Inhalte über Veranstaltungen...</p></section>
+            <section id="ueber-uns"><h2>Über uns</h2><p>Inhalte über uns...</p></section>
+            <section id="mitgliedschaft"><h2>Mitgliedschaft</h2><p>Inhalte über die Mitgliedschaft...</p></section>
+            <section id="spenden"><h2>Spenden</h2><p>Inhalte über Spenden...</p></section>
+            <section id="gallerie"><h2>Gallerie</h2><p>Inhalte über die Gallerie...</p></section>
+            <section id="impressum"><h2>Impressum</h2><p>Inhalte über das Impressum...</p></section>
+            <section id="datenschutz"><h2>Datenschutz</h2><p>Inhalte über den Datenschutz...</p></section>
         </div>
     </main>
     <footer>
@@ -210,11 +175,9 @@
     </footer>
     <div class="side-menu" id="side-menu">
         <ul>
-            <li><a href="#">Home</a></li>
             <li><a href="#verein">Verein</a></li>
             <li><a href="#veranstaltungen">Veranstaltungen</a></li>
             <li><a href="#ueber-uns">Über uns</a></li>
-            <li><a href="#kontakt">Kontakt</a></li>
             <li><a href="#mitgliedschaft">Mitgliedschaft</a></li>
             <li><a href="#spenden">Spenden</a></li>
             <li><a href="#gallerie">Gallerie</a></li>
@@ -222,7 +185,9 @@
             <li><a href="#datenschutz">Datenschutz</a></li>
         </ul>
     </div>
-    <div class="menu-toggle" id="menu-toggle">&#9776;</div>
+    <div class="menu-toggle" id="menu-toggle">
+        Menü
+    </div>
     <script>
         // Preloader Script
         let percent = 0;
@@ -232,18 +197,18 @@
             if (percent >= 100) {
                 clearInterval(interval);
                 document.getElementById('start-button').classList.add('show');
+                document.getElementById('menu-toggle').style.display = 'block'; // Zeige den Menü-Button nach dem Preloader
             }
         }, 80); // Ladedauer von etwa 8 Sekunden für 100%
 
         function start() {
             document.getElementById('preloader').style.display = 'none';
+            document.getElementById('side-menu').style.display = 'block'; // Zeige das Menü nach dem Preloader
         }
 
-        // Menu Toggle Script
-        const menuToggle = document.getElementById('menu-toggle');
-        const sideMenu = document.getElementById('side-menu');
-
-        menuToggle.addEventListener('click', function() {
+        // Toggle Menu Script
+        document.getElementById('menu-toggle').addEventListener('click', function() {
+            let sideMenu = document.getElementById('side-menu');
             if (sideMenu.style.display === 'none' || sideMenu.style.display === '') {
                 sideMenu.style.display = 'block';
             } else {
