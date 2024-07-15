@@ -73,13 +73,20 @@
             color: #fff;
             padding: 10px;
             text-align: center;
-            display: flex;
-            justify-content: center; /* Zentrieren des Logos */
-            align-items: center;
-            flex-wrap: wrap;
+            position: relative;
+            z-index: 1000;
+        }
+        header h1 {
+            margin: 0;
+            font-size: 24px;
+            text-align: center;
         }
         header img {
             height: 80px;
+            position: absolute;
+            right: 10px;
+            top: 50%;
+            transform: translateY(-50%);
         }
         main {
             padding: 20px;
@@ -154,20 +161,13 @@
         <button onclick="start()" id="start-button">HIER GEHT ES LOS</button>
     </div>
     <header>
+        <h1>Kuckucksgemeinschaft Altenritte e. V.</h1>
         <img src="Kuckuck5.png" alt="Kuckucksgemeinschaft Logo">
     </header>
     <main>
         <div class="container">
-            <h1>Kuckucksgemeinschaft Altenritte e. V.</h1>
-            <p>Willkommen auf der Seite der Kuckucksgemeinschaft Altenritte e. V.</p>
-            <section id="verein"><h2>Verein</h2><p>Inhalte über den Verein...</p></section>
-            <section id="veranstaltungen"><h2>Veranstaltungen</h2><p>Inhalte über Veranstaltungen...</p></section>
-            <section id="ueber-uns"><h2>Über uns</h2><p>Inhalte über uns...</p></section>
-            <section id="mitgliedschaft"><h2>Mitgliedschaft</h2><p>Inhalte über die Mitgliedschaft...</p></section>
-            <section id="spenden"><h2>Spenden</h2><p>Inhalte über Spenden...</p></section>
-            <section id="gallerie"><h2>Gallerie</h2><p>Inhalte über die Gallerie...</p></section>
-            <section id="impressum"><h2>Impressum</h2><p>Inhalte über das Impressum...</p></section>
-            <section id="datenschutz"><h2>Datenschutz</h2><p>Inhalte über den Datenschutz...</p></section>
+            <h2>Willkommen auf der Homepage der Kuckucksgemeinschaft Altenritte e. V.</h2>
+            <p>Hier könnte der Inhalt der Homepage stehen...</p>
         </div>
     </main>
     <footer>
@@ -175,6 +175,7 @@
     </footer>
     <div class="side-menu" id="side-menu">
         <ul>
+            <li><a href="#">Home</a></li>
             <li><a href="#verein">Verein</a></li>
             <li><a href="#veranstaltungen">Veranstaltungen</a></li>
             <li><a href="#ueber-uns">Über uns</a></li>
@@ -197,13 +198,12 @@
             if (percent >= 100) {
                 clearInterval(interval);
                 document.getElementById('start-button').classList.add('show');
-                document.getElementById('menu-toggle').style.display = 'block'; // Zeige den Menü-Button nach dem Preloader
             }
         }, 80); // Ladedauer von etwa 8 Sekunden für 100%
 
         function start() {
             document.getElementById('preloader').style.display = 'none';
-            document.getElementById('side-menu').style.display = 'block'; // Zeige das Menü nach dem Preloader
+            document.getElementById('menu-toggle').style.display = 'block'; // Zeige den Menü-Button nach dem Preloader
         }
 
         // Toggle Menu Script
