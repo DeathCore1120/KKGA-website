@@ -76,19 +76,17 @@
             position: relative;
             z-index: 1000;
             display: flex;
-            justify-content: flex-start; /* Logo und Text links ausrichten */
+            justify-content: center; /* Zentrieren von Logo und Text */
             align-items: center;
+            flex-direction: column; /* Spaltenorientierung für zentrierte Anordnung */
         }
         header h1 {
-            margin: 0;
+            margin: 10px 0; /* Abstand oben und unten */
             font-size: 36px; /* Größere Schriftgröße im Header */
-            text-align: left; /* Text links ausrichten */
-            display: inline-block; /* Erlaubt Inline-Block-Elemente nebeneinander */
-            margin-left: 20px; /* Abstand zwischen Logo und Text */
         }
         header img {
             height: 80px; /* Größe des Logos im Header */
-            margin-right: 20px; /* Abstand zwischen Logo und Text */
+            margin-bottom: 10px; /* Abstand zum Text */
         }
         main {
             padding: 20px;
@@ -101,14 +99,12 @@
             padding: 20px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
             margin-top: 50px; /* Space for scrolling */
-            text-align: center; /* Zentrieren des Textes */
+            text-align: left; /* Text linksbündig ausrichten */
             position: relative;
         }
         .logo-container {
-            position: absolute;
-            top: -80px; /* Negative Positionierung für das Logo über dem Container */
-            left: 50%;
-            transform: translateX(-50%);
+            text-align: center; /* Zentrieren des Logos */
+            margin-bottom: 20px; /* Abstand zum Text */
         }
         .logo-container img {
             height: 150px; /* Größe des Logos */
@@ -175,13 +171,36 @@
         <button onclick="start()" id="start-button">HIER GEHT ES LOS</button>
     </div>
     <header>
-        <img src="Kuckuck5.png" alt="Kuckucksgemeinschaft Logo">
+        <div class="logo-container">
+            <img src="Kuckuck5.png" alt="Kuckucksgemeinschaft Logo">
+        </div>
         <h1>Kuckucksgemeinschaft Altenritte e. V.</h1>
     </header>
     <main>
         <div class="container">
-            <h2>Willkommen auf der Homepage der Kuckucksgemeinschaft Altenritte e. V.</h2>
-            <p>Hier könnte der Inhalt der Homepage stehen...</p>
+            <h2 id="verein">Verein</h2>
+            <p>Hier könnte der Text zum Verein stehen...</p>
+
+            <h2 id="veranstaltungen">Veranstaltungen</h2>
+            <p>Hier könnte der Text zu den Veranstaltungen stehen...</p>
+
+            <h2 id="ueber-uns">Über uns</h2>
+            <p>Hier könnte der Text über uns stehen...</p>
+
+            <h2 id="mitgliedschaft">Mitgliedschaft</h2>
+            <p>Hier könnte der Text zur Mitgliedschaft stehen...</p>
+
+            <h2 id="spenden">Spenden</h2>
+            <p>Hier könnte der Text zu Spenden stehen...</p>
+
+            <h2 id="gallerie">Gallerie</h2>
+            <p>Hier könnte der Text zur Gallerie stehen...</p>
+
+            <h2 id="impressum">Impressum</h2>
+            <p>Hier könnte der Text zum Impressum stehen...</p>
+
+            <h2 id="datenschutz">Datenschutz</h2>
+            <p>Hier könnte der Text zum Datenschutz stehen...</p>
         </div>
     </main>
     <footer>
@@ -201,9 +220,7 @@
             <li><a href="#datenschutz">Datenschutz</a></li>
         </ul>
     </div>
-    <div class="menu-toggle" id="menu-toggle">
-        Menü
-    </div>
+    <div class="menu-toggle" id="menu-toggle">&#9776;</div>
     <script>
         // Preloader Script
         let percent = 0;
@@ -218,12 +235,13 @@
 
         function start() {
             document.getElementById('preloader').style.display = 'none';
-            document.getElementById('menu-toggle').style.display = 'block'; // Zeige den Menü-Button nach dem Preloader
         }
 
-        // Toggle Menu Script
-        document.getElementById('menu-toggle').addEventListener('click', function() {
-            let sideMenu = document.getElementById('side-menu');
+        // Menu Toggle Script
+        const menuToggle = document.getElementById('menu-toggle');
+        const sideMenu = document.getElementById('side-menu');
+
+        menuToggle.addEventListener('click', function() {
             if (sideMenu.style.display === 'none' || sideMenu.style.display === '') {
                 sideMenu.style.display = 'block';
             } else {
