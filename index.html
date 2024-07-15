@@ -30,26 +30,32 @@
             z-index: 9999;
             color: #fff;
         }
-        #preloader .loader {
-            border: 16px solid #f3f3f3;
-            border-radius: 50%;
-            border-top: 16px solid #555;
-            width: 120px;
-            height: 120px;
-            animation: spin 2s linear infinite;
+        #loading-text {
+            font-size: 24px;
+            margin-bottom: 20px;
         }
-        @keyframes spin {
-            0% { transform: rotate(0deg); }
-            100% { transform: rotate(360deg); }
+        #loading-percent {
+            font-size: 48px;
+            font-weight: bold;
+            margin-bottom: 20px;
         }
         #preloader button {
-            margin-top: 20px;
             padding: 10px 20px;
             background: #fff;
             color: #333;
             border: none;
             border-radius: 5px;
             cursor: pointer;
+            display: none;
+        }
+        #preloader button.show {
+            display: block;
+            animation: pulse 1s infinite;
+        }
+        @keyframes pulse {
+            0% { opacity: 0; }
+            50% { opacity: 1; }
+            100% { opacity: 0; }
         }
         header {
             background: #333;
@@ -173,8 +179,9 @@
 </head>
 <body>
     <div id="preloader">
-        <div class="loader"></div>
-        <button onclick="start()">HIER GEHT ES LOS</button>
+        <div id="loading-text">Ladevorgang...</div>
+        <div id="loading-percent">0%</div>
+        <button onclick="start()" id="start-button">HIER GEHT ES LOS</button>
     </div>
     <header>
         <h1>Kuckucksgemeinschaft Altenritte e. V.</h1>
@@ -216,6 +223,20 @@
                         </div>
                     </div>
                 </div>
+                <div class="accordion-item" id="veranstaltungen">
+                    <div class="accordion-header">
+                        <span>Veranstaltungen</span>
+                        <span>+</span>
+                    </div>
+                    <div class="accordion-content">
+                        <p>
+                            Im nächsten Jahr steht unter dem Motto "RITTAHE2025" so einiges an, denn die Ortsteile Großenritte und Altenritte feiern 1-Jahr lang ihr 1250-Jahr-Jubiläum. Die Kuckucksgemeinschaft
+                            Altenritte e. V. hat sich der extra dafür gegründeten Jubiläumsgemeinschaft (<a href="https://rittahe2025.de" target="_blank">RITTAHE2025-Website</a>) angeschlossen. Zu diesem Anlass wollen wir uns gleich an 
+                            mehreren Veranstaltungen beteiligen und als Hauptveranstaltung das frühere "Kuckucksfest" vom 16.08.25 - 17.08.25 veranstalten. Wir stehen dazu in Absprache mit allen Beteiligten und 
+                            weiter Infos folgen.
+                        </p>
+                    </div>
+                </div>
                 <div class="accordion-item" id="vorstand">
                     <div class="accordion-header">
                         <span>Vorstand</span>
@@ -223,8 +244,7 @@
                     </div>
                     <div class="accordion-content">
                         <p>
-                            Der Vorstand setzt sich aus engagierten Mitgliedern zusammen, die sich für die Belange der Kuckucksgemeinschaft Altenritte e. V. einsetzen.
-                            Hier werden bald weitere Informationen und Details zu den Vorstandsmitgliedern verfügbar sein.
+                            Der Vorstand der Kuckucksgemeinschaft Altenritte e. V. setzt sich aus engagierten Mitgliedern zusammen, die sich für das Wohl der Gemeinschaft einsetzen. In Kürze werden hier weitere Informationen zu den einzelnen Vorstandsmitgliedern veröffentlicht.
                         </p>
                     </div>
                 </div>
@@ -235,8 +255,7 @@
                     </div>
                     <div class="accordion-content">
                         <p>
-                            Unsere Galerie zeigt Impressionen vergangener Veranstaltungen, Aktivitäten und des Gemeinschaftslebens in Altenritte.
-                            Schauen Sie bald wieder vorbei, um die vielfältigen Bilder und Eindrücke zu erkunden.
+                            Unsere Galerie zeigt Impressionen vergangener Veranstaltungen und Aktivitäten. Bald werden hier Fotos und Erinnerungen aus Altenritte zu sehen sein.
                         </p>
                     </div>
                 </div>
@@ -291,6 +310,16 @@
         });
 
         // Preloader Script
+        let percent = 0;
+        let interval = setInterval(function() {
+            percent += 10;
+            document.getElementById('loading-percent').textContent = percent + '%';
+            if (percent >= 100) {
+                clearInterval(interval);
+                document.getElementById('start-button').classList.add('show');
+            }
+        }, 500);
+
         function start() {
             document.getElementById('preloader').style.display = 'none';
         }
