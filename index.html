@@ -112,6 +112,7 @@
             padding: 20px;
             border-radius: 10px 0 0 10px;
             z-index: 10000;
+            display: none; /* Verstecke das Menü initial */
         }
         .side-menu ul {
             list-style: none;
@@ -159,33 +160,11 @@
     <footer>
         &copy; 2024 Kuckucksgemeinschaft Altenritte e. V.
     </footer>
-    <div class="side-menu">
+    <div class="side-menu" id="side-menu">
         <ul>
             <li><a href="#verein">Verein</a></li>
             <li><a href="#veranstaltungen">Veranstaltungen</a></li>
             <li><a href="#ueber-uns">Über uns</a></li>
             <li><a href="#mitgliedschaft">Mitgliedschaft</a></li>
             <li><a href="#spenden">Spenden</a></li>
-            <li><a href="#gallerie">Gallerie</a></li>
-            <li><a href="#impressum">Impressum</a></li>
-            <li><a href="#datenschutz">Datenschutz</a></li>
-        </ul>
-    </div>
-    <script>
-        // Preloader Script
-        let percent = 0;
-        let interval = setInterval(function() {
-            percent += 1; // Anstieg der Prozentzahl in 1er Schritten
-            document.getElementById('loading-percent').textContent = percent + '%';
-            if (percent >= 100) {
-                clearInterval(interval);
-                document.getElementById('start-button').classList.add('show');
-            }
-        }, 80); // Ladedauer von etwa 8 Sekunden für 100%
-
-        function start() {
-            document.getElementById('preloader').style.display = 'none';
-        }
-    </script>
-</body>
-</html>
+            <li><a href="#gallerie">Gallerie</a></
