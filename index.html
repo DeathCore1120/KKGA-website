@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kuckucksgemeinschaft Altenritte e. V.</title>
-    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -150,48 +149,6 @@
             z-index: 10001;
             display: none; /* Verstecke den Menü-Button initial */
         }
-        .testimonials {
-            text-align: center;
-            padding: 50px 20px;
-            background: #fff;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            margin: 20px auto;
-            max-width: 800px;
-        }
-        
-        .testimonials h2 {
-            margin-bottom: 20px;
-            font-size: 24px;
-        }
-        
-        .swiper-container {
-            width: 100%;
-            padding-top: 50px;
-            padding-bottom: 50px;
-        }
-        
-        .swiper-slide {
-            background: #fff;
-            padding: 20px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            border-radius: 10px;
-        }
-        
-        blockquote {
-            font-size: 18px;
-            line-height: 1.6;
-            margin: 0;
-        }
-        
-        footer {
-            margin-top: 10px;
-            font-size: 16px;
-            color: #555;
-        }
-        
-        .swiper-pagination-bullet-active {
-            background: #007aff;
-        }
     </style>
 </head>
 <body>
@@ -239,38 +196,6 @@
             <section id="impressum"><h2>Impressum</h2><p>In Bearbeitung</p></section><br><br><br><br>
             <section id="datenschutz"><h2>Datenschutz</h2><p>In Bearbeitung</p></section><br><br><br><br>
         </div>
-        
-        <!-- Testimonials Section -->
-        <div class="testimonials">
-            <h2>Testimonials</h2>
-            <div class="swiper-container">
-                <div class="swiper-wrapper">
-                    <div class="swiper-slide">
-                        <blockquote>
-                            "Die Kuckucksgemeinschaft Altenritte e. V. hat unser Dorfleben wirklich bereichert. Wir freuen uns auf viele weitere Veranstaltungen!"
-                            <footer>- Mitglied A</footer>
-                        </blockquote>
-                    </div>
-                    <div class="swiper-slide">
-                        <blockquote>
-                            "Ein toller Verein mit viel Engagement und Herz für unsere Gemeinschaft."
-                            <footer>- Mitglied B</footer>
-                        </blockquote>
-                    </div>
-                    <div class="swiper-slide">
-                        <blockquote>
-                            "Durch die Kuckucksgemeinschaft habe ich viele neue Leute kennengelernt und mich sofort willkommen gefühlt."
-                            <footer>- Mitglied C</footer>
-                        </blockquote>
-                    </div>
-                </div>
-                <!-- Add Pagination -->
-                <div class="swiper-pagination"></div>
-            </div>
-        </div>
-        <div class="container">
-            <p>In Bearbeitung </p><br><br><br><br><br><br>
-        </div>
     </main>
     <footer>
         &copy; 2024 Kuckucksgemeinschaft Altenritte e. V. <b>-An dieser Seite wird aktuell gearbeitet-</b>
@@ -291,7 +216,6 @@
     <div class="menu-toggle" id="menu-toggle">
         Menü
     </div>
-    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <script>
         // Preloader Script
         let percent = 0;
@@ -320,19 +244,6 @@
             } else {
                 sideMenu.style.display = 'none';
             }
-        });
-
-        // Initialize Swiper
-        var swiper = new Swiper('.swiper-container', {
-            slidesPerView: 1,
-            spaceBetween: 10,
-            pagination: {
-                el: '.swiper-pagination',
-                clickable: true,
-            },
-            autoplay: {
-                delay: 5000,
-            },
         });
     </script>
 </body>
