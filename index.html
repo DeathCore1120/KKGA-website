@@ -110,6 +110,15 @@
             width: 100%;
             bottom: 0;
         }
+        .audio-controls {
+            text-align: center;
+            margin: 20px 0;
+        }
+        .audio-controls button {
+            padding: 10px 20px;
+            margin: 5px;
+            font-size: 16px;
+        }
     </style>
 </head>
 <body>
@@ -211,11 +220,19 @@
                     </div>
                 </div>
             </div>
+            <div class="audio-controls">
+                <button onclick="playMusic()">Play</button>
+                <button onclick="pauseMusic()">Stop</button>
+            </div>
         </div>
     </main>
     <footer>
         &copy; 2024 Kuckucksgemeinschaft Altenritte e. V.
     </footer>
+    <audio id="background-music" loop>
+        <source src="path-to-your-music-file.mp3" type="audio/mpeg">
+        Dein Browser unterstützt das Audio-Element nicht.
+    </audio>
     <script>
         document.querySelectorAll('.accordion-header').forEach(header => {
             header.addEventListener('click', function() {
@@ -233,6 +250,15 @@
             } else {
                 alert('Falsches Passwort. Bitte versuchen Sie es erneut.');
             }
+        }
+
+        // Funktionen für die Musiksteuerung
+        function playMusic() {
+            document.getElementById('background-music').play();
+        }
+
+        function pauseMusic() {
+            document.getElementById('background-music').pause();
         }
     </script>
 </body>
