@@ -167,4 +167,27 @@
             <li><a href="#ueber-uns">Über uns</a></li>
             <li><a href="#mitgliedschaft">Mitgliedschaft</a></li>
             <li><a href="#spenden">Spenden</a></li>
-            <li><a href="#gallerie">Gallerie</a></
+            <li><a href="#gallerie">Gallerie</a></li>
+            <li><a href="#impressum">Impressum</a></li>
+            <li><a href="#datenschutz">Datenschutz</a></li>
+        </ul>
+    </div>
+    <script>
+        // Preloader Script
+        let percent = 0;
+        let interval = setInterval(function() {
+            percent += 1; // Anstieg der Prozentzahl in 1er Schritten
+            document.getElementById('loading-percent').textContent = percent + '%';
+            if (percent >= 100) {
+                clearInterval(interval);
+                document.getElementById('start-button').classList.add('show');
+            }
+        }, 80); // Ladedauer von etwa 8 Sekunden für 100%
+
+        function start() {
+            document.getElementById('preloader').style.display = 'none';
+            document.getElementById('side-menu').style.display = 'block'; // Zeige das Menü nach dem Preloader
+        }
+    </script>
+</body>
+</html>
