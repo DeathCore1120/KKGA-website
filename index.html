@@ -22,8 +22,8 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background: url('Schwarz-Weiß.png') #333 center no-repeat; /* Hintergrundbild für Preloader */
-            background-size: cover; /* Vollständige Abdeckung des Hintergrunds */
+            background: url('Schwarz-Weiß.png') #333 center no-repeat;
+            background-size: cover;
             display: flex;
             justify-content: center;
             align-items: center;
@@ -34,17 +34,17 @@
         #loading-text {
             font-size: 24px;
             margin-bottom: 20px;
-            padding: 10px; /* Umrandung */
-            background-color: rgba(0, 0, 0, 0.5); /* Umrandung */
-            border-radius: 5px; /* Umrandung */
+            padding: 10px;
+            background-color: rgba(0, 0, 0, 0.5);
+            border-radius: 5px;
         }
         #loading-percent {
             font-size: 48px;
             font-weight: bold;
             margin-bottom: 20px;
-            padding: 10px; /* Umrandung */
-            background-color: rgba(0, 0, 0, 0.5); /* Umrandung */
-            border-radius: 5px; /* Umrandung */
+            padding: 10px;
+            background-color: rgba(0, 0, 0, 0.5);
+            border-radius: 5px;
         }
         #preloader button {
             padding: 10px 20px;
@@ -54,8 +54,8 @@
             border-radius: 5px;
             cursor: pointer;
             display: none;
-            margin-top: 20px; /* Abstand zum Prozentwert */
-            border: 2px solid #fff; /* Umrandung */
+            margin-top: 20px;
+            border: 2px solid #fff;
         }
         #preloader button.show {
             display: block;
@@ -76,12 +76,9 @@
             align-items: center;
             flex-wrap: wrap;
         }
-        header h1 {
-            margin: 0;
-            padding-right: 10px;
-        }
         header img {
             height: 80px;
+            order: -1;
         }
         nav ul {
             list-style-type: none;
@@ -106,10 +103,6 @@
             header {
                 flex-direction: column;
             }
-            header h1 {
-                padding-right: 0;
-                margin-bottom: 10px;
-            }
             nav ul {
                 flex-direction: column;
                 align-items: center;
@@ -125,7 +118,8 @@
             background: rgba(255, 255, 255, 0.8);
             padding: 20px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            margin-top: 50px; /* Space for scrolling */
+            margin-top: 50px;
+            text-align: center;
         }
         .cta {
             margin-top: 20px;
@@ -143,38 +137,6 @@
         .cta a:hover {
             background: #555;
         }
-        .accordion {
-            margin: 20px 0;
-        }
-        .accordion-item {
-            background: rgba(255, 255, 255, 0.8);
-            border: 1px solid #ddd;
-            margin-bottom: 10px;
-            border-radius: 5px;
-            overflow: hidden;
-        }
-        .accordion-header {
-            background: #333;
-            color: #fff;
-            padding: 10px;
-            cursor: pointer;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-        .accordion-header:hover {
-            background: #555;
-        }
-        .accordion-content {
-            display: none;
-            padding: 20px;
-        }
-        .accordion-content p {
-            margin: 0 0 10px;
-        }
-        .active .accordion-content {
-            display: block;
-        }
         footer {
             background: #333;
             color: #fff;
@@ -183,6 +145,11 @@
             position: fixed;
             width: 100%;
             bottom: 0;
+        }
+        .main-title {
+            font-size: 36px;
+            font-weight: bold;
+            color: #333;
         }
     </style>
 </head>
@@ -193,7 +160,6 @@
         <button onclick="start()" id="start-button">HIER GEHT ES LOS</button>
     </div>
     <header>
-        <h1>Kuckucksgemeinschaft Altenritte e. V.</h1>
         <img src="Kuckuck5.png" alt="Kuckucksgemeinschaft Logo">
         <nav>
             <ul>
@@ -209,125 +175,79 @@
     </header>
     <main>
         <div class="container" id="verein">
-            <div class="accordion">
-                <div class="accordion-item">
-                    <div class="accordion-header">
-                        <span>Willkommen bei der Kuckucksgemeinschaft</span>
-                        <span>+</span>
-                    </div>
-                    <div class="accordion-content">
-                        <p>
-                            Hi, wir sind ein neuer Verein, der sich der Gemeinschaft in Altenritte verpflichtet hat.<br><br>
-                            Wir laden alle Bewohner und Freunde von Altenritte herzlich ein, sich unserer Gemeinschaft anzuschließen. 
-                            Unser Ziel ist es, als Plattform der Zusammenkunft für Jung und Alt zu dienen. Wir möchten Altenritte, 
-                            die ortsansässigen Vereine und Institutionen durch gemeinsame Veranstaltungen und Zusammenarbeit auf gemeinnütziger Basis fördern, stärken und unterstützen. <br><br>
-                            Darüber hinaus wollen wir eine Brücke zwischen neu zugezogenen und alteingesessen Bürgern bauen, sowie Einblicke in die Traditionen unseres schönen Ortes vermitteln, um ein harmonisches 
-                            und lebendiges Miteinander als Gemeinschaft zu schaffen.
-                        </p>
-                        <p>
-                            Falls Sie uns bereits jetzt durch Spenden oder als Mitglied unterstützen möchten, melden Sie sich bitte unter <a href="mailto:kuckucksgemeinschaft@altenritte.com">kuckucksgemeinschaft@altenritte.com</a>.
-                        </p>
-                        <div class="cta">
-                            <a href="mailto:kuckucksgemeinschaft@altenritte.com">Kontaktieren Sie uns</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="accordion-item" id="veranstaltungen">
-                    <div class="accordion-header">
-                        <span>Veranstaltungen</span>
-                        <span>+</span>
-                    </div>
-                    <div class="accordion-content">
-                        <p>
-                            Im nächsten Jahr steht unter dem Motto "RITTAHE2025" so einiges an, denn die Ortsteile Großenritte und Altenritte feiern 1-Jahr lang ihr 1250-Jahr-Jubiläum. Die Kuckucksgemeinschaft
-                            Altenritte e. V. hat sich der extra dafür gegründeten Jubiläumsgemeinschaft (<a href="https://rittahe2025.de" target="_blank">RITTAHE2025-Website</a>) angeschlossen. Zu diesem Anlass wollen wir uns gleich an 
-                            mehreren Veranstaltungen beteiligen und als Hauptveranstaltung das frühere "Kuckucksfest" vom 16.08.25 - 17.08.25 veranstalten. Wir stehen dazu in Absprache mit allen Beteiligten und 
-                            weiter Infos folgen.
-                        </p>
-                    </div>
-                </div>
-                <div class="accordion-item" id="vorstand">
-                    <div class="accordion-header">
-                        <span>Vorstand</span>
-                        <span>+</span>
-                    </div>
-                    <div class="accordion-content">
-                        <p>
-                            Der Vorstand der Kuckucksgemeinschaft Altenritte e. V. setzt sich aus engagierten Mitgliedern zusammen, die sich für das Wohl der Gemeinschaft einsetzen. In Kürze werden hier weitere Informationen zu den einzelnen Vorstandsmitgliedern veröffentlicht.
-                        </p>
-                    </div>
-                </div>
-                <div class="accordion-item" id="galerie">
-                    <div class="accordion-header">
-                        <span>Galerie</span>
-                        <span>+</span>
-                    </div>
-                    <div class="accordion-content">
-                        <p>
-                            Unsere Galerie zeigt Impressionen vergangener Veranstaltungen und Aktivitäten. Bald werden hier Fotos und Erinnerungen aus Altenritte zu sehen sein.
-                        </p>
-                    </div>
-                </div>
-                <div class="accordion-item" id="kontakt">
-                    <div class="accordion-header">
-                        <span>Kontakt</span>
-                        <span>+</span>
-                    </div>
-                    <div class="accordion-content">
-                        <p>
-                            Sie möchten mit uns in Kontakt treten? Nutzen Sie gerne unser Kontaktformular oder senden Sie uns eine E-Mail an <a href="mailto:kuckucksgemeinschaft@altenritte.com">kuckucksgemeinschaft@altenritte.com</a>.
-                            Wir freuen uns, von Ihnen zu hören und stehen Ihnen für Fragen, Anregungen und mehr zur Verfügung.
-                        </p>
-                    </div>
-                </div>
-                <div class="accordion-item" id="impressum">
-                    <div class="accordion-header">
-                        <span>Impressum</span>
-                        <span>+</span>
-                    </div>
-                    <div class="accordion-content">
-                        <p>
-                            Das Impressum wird bald hier verfügbar sein und alle rechtlichen Informationen gemäß den gesetzlichen Vorgaben enthalten.
-                            Bitte besuchen Sie diese Seite bald wieder, um mehr zu erfahren.
-                        </p>
-                    </div>
-                </div>
-                <div class="accordion-item" id="datenschutz">
-                    <div class="accordion-header">
-                        <span>Datenschutz</span>
-                        <span>+</span>
-                    </div>
-                    <div class="accordion-content">
-                        <p>
-                            Ihre Privatsphäre ist uns wichtig. Die Datenschutzbestimmungen unserer Website werden in Kürze hier veröffentlicht.
-                            Schauen Sie später wieder vorbei, um mehr darüber zu erfahren, wie wir Ihre Daten schützen und verwenden.
-                        </p>
-                    </div>
-                </div>
+            <h1 class="main-title">Kuckucksgemeinschaft Altenritte e. V.</h1>
+            <p>
+                Hi, wir sind ein neuer Verein, der sich der Gemeinschaft in Altenritte verpflichtet hat.<br><br>
+                Wir laden alle Bewohner und Freunde von Altenritte herzlich ein, sich unserer Gemeinschaft anzuschließen. 
+                Unser Ziel ist es, als Plattform der Zusammenkunft für Jung und Alt zu dienen. Wir möchten Altenritte, 
+                die ortsansässigen Vereine und Institutionen durch gemeinsame Veranstaltungen und Zusammenarbeit auf gemeinnütziger Basis fördern, stärken und unterstützen. <br><br>
+                Darüber hinaus wollen wir eine Brücke zwischen neu zugezogenen und alteingesessen Bürgern bauen, sowie Einblicke in die Traditionen unseres schönen Ortes vermitteln, um ein harmonisches 
+                und lebendiges Miteinander als Gemeinschaft zu schaffen.
+            </p>
+            <p>
+                Falls Sie uns bereits jetzt durch Spenden oder als Mitglied unterstützen möchten, melden Sie sich bitte unter <a href="mailto:kuckucksgemeinschaft@altenritte.com">kuckucksgemeinschaft@altenritte.com</a>.
+            </p>
+            <div class="cta">
+                <a href="mailto:kuckucksgemeinschaft@altenritte.com">Kontaktieren Sie uns</a>
             </div>
+        </div>
+        <div class="container" id="veranstaltungen">
+            <h2>Veranstaltungen</h2>
+            <p>
+                Im nächsten Jahr steht unter dem Motto "RITTAHE2025" so einiges an, denn die Ortsteile Großenritte und Altenritte feiern 1-Jahr lang ihr 1250-Jahr-Jubiläum. Die Kuckucksgemeinschaft
+                Altenritte e. V. hat sich der extra dafür gegründeten Jubiläumsgemeinschaft (<a href="https://rittahe2025.de" target="_blank">RITTAHE2025-Website</a>) angeschlossen. Zu diesem Anlass wollen wir uns gleich an 
+                mehreren Veranstaltungen beteiligen und als Hauptveranstaltung das frühere "Kuckucksfest" vom 16.08.25 - 17.08.25 veranstalten. Wir stehen dazu in Absprache mit allen Beteiligten und 
+                weiter Infos folgen.
+            </p>
+        </div>
+        <div class="container" id="vorstand">
+            <h2>Vorstand</h2>
+            <p>
+                Der Vorstand der Kuckucksgemeinschaft Altenritte e. V. setzt sich aus engagierten Mitgliedern zusammen, die sich für das Wohl der Gemeinschaft einsetzen. In Kürze werden hier weitere Informationen zu den einzelnen Vorstandsmitgliedern veröffentlicht.
+            </p>
+        </div>
+        <div class="container" id="galerie">
+            <h2>Galerie</h2>
+            <p>
+                Unsere Galerie zeigt Impressionen vergangener Veranstaltungen und Aktivitäten. Bald werden hier Fotos und Erinnerungen aus Altenritte zu sehen sein.
+            </p>
+        </div>
+        <div class="container" id="kontakt">
+            <h2>Kontakt</h2>
+            <p>
+                Sie möchten mit uns in Kontakt treten? Nutzen Sie gerne unser Kontaktformular oder senden Sie uns eine E-Mail an <a href="mailto:kuckucksgemeinschaft@altenritte.com">kuckucksgemeinschaft@altenritte.com</a>.
+                Wir freuen uns, von Ihnen zu hören und stehen Ihnen für Fragen, Anregungen und mehr zur Verfügung.
+            </p>
+        </div>
+        <div class="container" id="impressum">
+            <h2>Impressum</h2>
+            <p>
+                Das Impressum wird bald hier verfügbar sein und alle rechtlichen Informationen gemäß den gesetzlichen Vorgaben enthalten.
+                Bitte besuchen Sie diese Seite bald wieder, um mehr zu erfahren.
+            </p>
+        </div>
+        <div class="container" id="datenschutz">
+            <h2>Datenschutz</h2>
+            <p>
+                Ihre Privatsphäre ist uns wichtig. Die Datenschutzbestimmungen unserer Website werden in Kürze hier veröffentlicht.
+                Schauen Sie später wieder vorbei, um mehr darüber zu erfahren, wie wir Ihre Daten schützen und verwenden.
+            </p>
         </div>
     </main>
     <footer>
         &copy; 2024 Kuckucksgemeinschaft Altenritte e. V.
     </footer>
     <script>
-        // Accordion Script
-        document.querySelectorAll('.accordion-header').forEach(header => {
-            header.addEventListener('click', function() {
-                this.parentElement.classList.toggle('active');
-            });
-        });
-
         // Preloader Script
         let percent = 0;
         let interval = setInterval(function() {
-            percent += 1; // Anstieg der Prozentzahl in 1er Schritten
+            percent += 1;
             document.getElementById('loading-percent').textContent = percent + '%';
             if (percent >= 100) {
                 clearInterval(interval);
                 document.getElementById('start-button').classList.add('show');
             }
-        }, 80); // Ladedauer von etwa 8 Sekunden für 100%
+        }, 80);
 
         function start() {
             document.getElementById('preloader').style.display = 'none';
