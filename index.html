@@ -62,6 +62,36 @@
             display: block;
             animation: pulse 1s infinite;
         }
+        .video-background {
+            position: fixed;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            overflow: hidden;
+            z-index: -1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        video {
+            min-width: 100%;
+            min-height: 100%;
+            width: auto;
+            height: auto;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: -1;
+        }
+        .content {
+            text-align: center;
+            color: #fff;
+            padding: 20px;
+            position: relative;
+            z-index: 1;
+        }
         @keyframes pulse {
             0% { opacity: 0; }
             50% { opacity: 1; }
@@ -179,65 +209,74 @@
         <div id="loading-percent">0%</div>
         <button onclick="start()" id="start-button">HIER GEHT ES LOS</button>
     </div>
-    <header>
-        <h1>Kuckucksgemeinschaft Altenritte e. V. </h1>
-        <img src="Kuckuck5.png" alt="Kuckucksgemeinschaft Logo">
-    </header>
-    <main>
-        <div class="container">
-            <p>Willkommen auf der Seite der Kuckucksgemeinschaft Altenritte e. V.</p>
-            <section id="verein"><h2>Verein</h2><p> Hi, wir sind ein neuer Verein, der sich der Gemeinschaft in Altenritte verpflichtet hat.<br><br>
-                            Wir laden alle Bewohner und Freunde von Altenritte herzlich ein, sich unserer Gemeinschaft anzuschließen. 
-                            Unser Ziel ist es, als Plattform der Zusammenkunft für Jung und Alt zu dienen. Wir möchten Altenritte, 
-                            die ortsansässigen Vereine und Institutionen durch gemeinsame Veranstaltungen und Zusammenarbeit auf gemeinnütziger Basis fördern, stärken und unterstützen. <br><br>
-                            Darüber hinaus wollen wir eine Brücke zwischen neu zugezogenen und alteingesessen Bürgern bauen, sowie Einblicke in die Traditionen unseres schönen Ortes vermitteln, um ein harmonisches 
-                            und lebendiges Miteinander als Gemeinschaft zu schaffen.</p></section><br><br><br><br>
-            <section id="veranstaltungen"><h2>Veranstaltungen</h2><p>Im nächsten Jahr steht unter dem Motto "RITTAHE2025" so einiges an, denn die Ortsteile Großenritte und Altenritte feiern 1-Jahr lang ihr 1250-Jahr-Jubiläum. Die Kuckucksgemeinschaft
-                            Altenritte e. V. hat sich der extra dafür gegründeten Jubiläumsgemeinschaft (<a href="https://rittahe2025.de" target="_blank">RITTAHE2025-Website</a>) angeschlossen. Zu diesem Anlass wollen wir uns gleich an 
-                            mehreren Veranstaltungen beteiligen und als Hauptveranstaltung das frühere "Kuckucksfest" vom 16.08.25 - 17.08.25 veranstalten. Wir stehen dazu in Absprache mit allen Beteiligten und 
-                            weiter Infos folgen.</p></section><br><br><br><br>
-            <section id="mitgliedschaft"><h2>Mitgliedschaft</h2><p>Aufnahmeanträge und Infos zur Vereinsmitgliedschaft sind in Bearbeitung und werden danach hier zu finden sein.</p></section><br><br><br><br>
-            <section id="ueber-uns"><h2>Über uns</h2><p>Die Kuckucksgemeinschaft Altenritte e. V. setzt sich als Ziel, die Dorfgemeinschaft, das 
-                            Zusammenleben, die Gemeinschaft, die öffentliche Außenwahrnehmung und das kulturelle Erbe des
-                            Baunataler Ortsteils Altenritte zu pflegen, zu bewahren und zu fördern. Zwecke des Vereins sind: <br><br>
-                            (1) die Förderung von Kultur. <br>
-                            (2) die Förderung der Heimatpflege und der Ortsverschönerung. </p></section><br><br>
-                            - Verein: "Kuckucksgemeinschaft Altenritte e. V." <br><br>
-                            - Vereinssitz: 34225 Baunatal-Altenritte <br><br>
-                            - Gründung: Der Verein wurde am 07.06.2024 in Altenritte von 9 Gründungsmitgliedern gegründet. <br><br>
-                            - e. V. : Der Verein wurde am 01.07.2024 beim Amtsgericht Kassel in das Vereinsregister eingetragen. <br><br>
-                            - Gemeinnützigkeit: Der Verein hat die Prüfung auf Gemeinnützigkeit beim Finanzamt Kassel beantragt. <br><br><br><br>
-            <section id="kontakt"><h2>Kontakt</h2><p>
-                            Falls Sie uns bereits jetzt durch Spenden oder als Mitglied unterstützen möchten, melden Sie sich bitte unter <a href="mailto:kuckucksgemeinschaft@altenritte.com">kuckucksgemeinschaft@altenritte.com</a>.
-                        </p><br><br><br><br>
-            <section id="spenden"><h2>Spenden</h2><p>Inhalte über Spenden und Sponsoring folgen.</p></section><br><br><br><br>
-            <section id="gallerie"><h2>Gallerie</h2><p>Bilder und Videos folgen.</p></section><br><br><br><br>
-            <section id="impressum"><h2>Impressum</h2><p>In Bearbeitung</p></section><br><br><br><br>
-            <section id="datenschutz"><h2>Datenschutz</h2><p>In Bearbeitung</p></section><br><br><br><br>
+    <div class="content">
+        <header>
+            <h1>Kuckucksgemeinschaft Altenritte e. V. </h1>
+            <img src="Kuckuck5.png" alt="Kuckucksgemeinschaft Logo">
+        </header>
+        <div class="video-background">
+            <video autoplay loop muted>
+                <source src="video.mp4" type="video/mp4">
+                <!-- Fallback, wenn das Video nicht geladen werden kann -->
+                Your browser does not support HTML5 video.
+            </video>
         </div>
-        <div class="container">
-            <p>In Bearbeitung</p><br><br><br><br><p>In Bearbeitung</p><br><br><br><br><p>In Bearbeitung</p><br><br><br><br><p>In Bearbeitung</p><br><br><br><br><p>In Bearbeitung</p><br><br><br><br><p>In Bearbeitung</p><br><br><br><br>
-        </div>
-        <section class="section-1">
+        <main>
             <div class="container">
-                <h2>Abschnitt 1</h2>
+                <p>Willkommen auf der Seite der Kuckucksgemeinschaft Altenritte e. V.</p>
+                <section id="verein"><h2>Verein</h2><p> Hi, wir sind ein neuer Verein, der sich der Gemeinschaft in Altenritte verpflichtet hat.<br><br>
+                                Wir laden alle Bewohner und Freunde von Altenritte herzlich ein, sich unserer Gemeinschaft anzuschließen. 
+                                Unser Ziel ist es, als Plattform der Zusammenkunft für Jung und Alt zu dienen. Wir möchten Altenritte, 
+                                die ortsansässigen Vereine und Institutionen durch gemeinsame Veranstaltungen und Zusammenarbeit auf gemeinnütziger Basis fördern, stärken und unterstützen. <br><br>
+                                Darüber hinaus wollen wir eine Brücke zwischen neu zugezogenen und alteingesessen Bürgern bauen, sowie Einblicke in die Traditionen unseres schönen Ortes vermitteln, um ein harmonisches 
+                                und lebendiges Miteinander als Gemeinschaft zu schaffen.</p></section><br><br><br><br>
+                <section id="veranstaltungen"><h2>Veranstaltungen</h2><p>Im nächsten Jahr steht unter dem Motto "RITTAHE2025" so einiges an, denn die Ortsteile Großenritte und Altenritte feiern 1-Jahr lang ihr 1250-Jahr-Jubiläum. Die Kuckucksgemeinschaft
+                                Altenritte e. V. hat sich der extra dafür gegründeten Jubiläumsgemeinschaft (<a href="https://rittahe2025.de" target="_blank">RITTAHE2025-Website</a>) angeschlossen. Zu diesem Anlass wollen wir uns gleich an 
+                                mehreren Veranstaltungen beteiligen und als Hauptveranstaltung das frühere "Kuckucksfest" vom 16.08.25 - 17.08.25 veranstalten. Wir stehen dazu in Absprache mit allen Beteiligten und 
+                                weiter Infos folgen.</p></section><br><br><br><br>
+                <section id="mitgliedschaft"><h2>Mitgliedschaft</h2><p>Aufnahmeanträge und Infos zur Vereinsmitgliedschaft sind in Bearbeitung und werden danach hier zu finden sein.</p></section><br><br><br><br>
+                <section id="ueber-uns"><h2>Über uns</h2><p>Die Kuckucksgemeinschaft Altenritte e. V. setzt sich als Ziel, die Dorfgemeinschaft, das 
+                                Zusammenleben, die Gemeinschaft, die öffentliche Außenwahrnehmung und das kulturelle Erbe des
+                                Baunataler Ortsteils Altenritte zu pflegen, zu bewahren und zu fördern. Zwecke des Vereins sind: <br><br>
+                                (1) die Förderung von Kultur. <br>
+                                (2) die Förderung der Heimatpflege und der Ortsverschönerung. </p></section><br><br>
+                                - Verein: "Kuckucksgemeinschaft Altenritte e. V." <br><br>
+                                - Vereinssitz: 34225 Baunatal-Altenritte <br><br>
+                                - Gründung: Der Verein wurde am 07.06.2024 in Altenritte von 9 Gründungsmitgliedern gegründet. <br><br>
+                                - e. V. : Der Verein wurde am 01.07.2024 beim Amtsgericht Kassel in das Vereinsregister eingetragen. <br><br>
+                                - Gemeinnützigkeit: Der Verein hat die Prüfung auf Gemeinnützigkeit beim Finanzamt Kassel beantragt. <br><br><br><br>
+                <section id="kontakt"><h2>Kontakt</h2><p>
+                                Falls Sie uns bereits jetzt durch Spenden oder als Mitglied unterstützen möchten, melden Sie sich bitte unter <a href="mailto:kuckucksgemeinschaft@altenritte.com">kuckucksgemeinschaft@altenritte.com</a>.
+                            </p><br><br><br><br>
+                <section id="spenden"><h2>Spenden</h2><p>Inhalte über Spenden und Sponsoring folgen.</p></section><br><br><br><br>
+                <section id="gallerie"><h2>Gallerie</h2><p>Bilder und Videos folgen.</p></section><br><br><br><br>
+                <section id="impressum"><h2>Impressum</h2><p>In Bearbeitung</p></section><br><br><br><br>
+                <section id="datenschutz"><h2>Datenschutz</h2><p>In Bearbeitung</p></section><br><br><br><br>
+            </div>
+            <div class="container">
                 <p>In Bearbeitung</p><br><br><br><br><p>In Bearbeitung</p><br><br><br><br><p>In Bearbeitung</p><br><br><br><br><p>In Bearbeitung</p><br><br><br><br><p>In Bearbeitung</p><br><br><br><br><p>In Bearbeitung</p><br><br><br><br>
             </div>
-        </section>
-
-        <section class="section-2">
-            <div class="container">
-                <h2>Abschnitt 2</h2>
-                <p>In Bearbeitung</p><br><br><br><br><p>In Bearbeitung</p><br><br><br><br><p>In Bearbeitung</p><br><br><br><br><p>In Bearbeitung</p><br><br><br><br><p>In Bearbeitung</p><br><br><br><br><p>In Bearbeitung</p><br><br><br><br>
-            </div>
-        </section>
-
-        <section class="section-3">
-            <div class="container">
-                <h2>Abschnitt 3</h2>
-                <p>In Bearbeitung</p><br><br><br><br><p>In Bearbeitung</p><br><br><br><br><p>In Bearbeitung</p><br><br><br><br><p>In Bearbeitung</p><br><br><br><br><p>In Bearbeitung</p><br><br><br><br><p>In Bearbeitung</p><br><br><br><br>
-            </div>
-        </section>
+            <section class="section-1">
+                <div class="container">
+                    <h2>Abschnitt 1</h2>
+                    <p>In Bearbeitung</p><br><br><br><br><p>In Bearbeitung</p><br><br><br><br><p>In Bearbeitung</p><br><br><br><br><p>In Bearbeitung</p><br><br><br><br><p>In Bearbeitung</p><br><br><br><br><p>In Bearbeitung</p><br><br><br><br>
+                </div>
+            </section>
+    
+            <section class="section-2">
+                <div class="container">
+                    <h2>Abschnitt 2</h2>
+                    <p>In Bearbeitung</p><br><br><br><br><p>In Bearbeitung</p><br><br><br><br><p>In Bearbeitung</p><br><br><br><br><p>In Bearbeitung</p><br><br><br><br><p>In Bearbeitung</p><br><br><br><br><p>In Bearbeitung</p><br><br><br><br>
+                </div>
+            </section>
+    
+            <section class="section-3">
+                <div class="container">
+                    <h2>Abschnitt 3</h2>
+                    <p>In Bearbeitung</p><br><br><br><br><p>In Bearbeitung</p><br><br><br><br><p>In Bearbeitung</p><br><br><br><br><p>In Bearbeitung</p><br><br><br><br><p>In Bearbeitung</p><br><br><br><br><p>In Bearbeitung</p><br><br><br><br>
+                </div>
+            </section>
+            
     </main>
     <footer>
         &copy; 2024 Kuckucksgemeinschaft Altenritte e. V. <b>-An dieser Seite wird aktuell gearbeitet-</b>
@@ -288,5 +327,6 @@
             }
         });
     </script>
+    </div>
 </body>
 </html>
