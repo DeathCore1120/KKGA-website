@@ -15,14 +15,16 @@
             background-repeat: no-repeat;
             background-attachment: fixed;
             background-position: center;
+        }
+
         #preloader {
             position: fixed;
             top: 0;
             left: 0;
             width: 100%;
             height: 100%;
-            background: url('Schwarz-Weiß.png') #333 center no-repeat; /* Hintergrundbild für Preloader */
-            background-size: cover; /* Vollständige Abdeckung des Hintergrunds */
+            background: url('Schwarz-Weiß.png') #333 center no-repeat;
+            background-size: cover;
             display: flex;
             justify-content: center;
             align-items: center;
@@ -33,19 +35,19 @@
         #loading-text {
             font-size: 24px;
             margin-bottom: 20px;
-            padding: 10px; /* Umrandung */
-            background-color: rgba(0, 0, 0, 0.5); /* Umrandung */
-            border-radius: 5px; /* Umrandung */
-            color: #FFA500; /* Dunkel Gelb-Orange */
+            padding: 10px;
+            background-color: rgba(0, 0, 0, 0.5);
+            border-radius: 5px;
+            color: #FFA500;
         }
         #loading-percent {
             font-size: 48px;
             font-weight: bold;
             margin-bottom: 20px;
-            padding: 10px; /* Umrandung */
-            background-color: rgba(0, 0, 0, 0.5); /* Umrandung */
-            border-radius: 5px; /* Umrandung */
-            color: #FFA500; /* Dunkel Gelb-Orange */
+            padding: 10px;
+            background-color: rgba(0, 0, 0, 0.5);
+            border-radius: 5px;
+            color: #FFA500;
         }
         #preloader button {
             padding: 10px 20px;
@@ -54,9 +56,9 @@
             border: none;
             border-radius: 5px;
             cursor: pointer;
-            display: none; /* Verstecke den Menü-Button initial */
-            margin-top: 20px; /* Abstand zum Prozentwert */
-            border: 2px solid #fff; /* Umrandung */
+            display: none;
+            margin-top: 20px;
+            border: 2px solid #fff;
         }
         #preloader button.show {
             display: block;
@@ -67,70 +69,42 @@
             50% { opacity: 1; }
             100% { opacity: 0; }
         }
-        .section-1 {
-                height: 100vh; /* Feste Höhe von 100% der Ansichtsfensterhöhe */
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                background-image: url('Schwarz-Weiß.png');
-                background-size: cover;
-                background-repeat: no-repeat;
-                background-position: center center;
-                color: #000; /* Beispielhafte Textfarbe für Kontrast */
-        }
 
-        .section-2 {
-            height: 100vh; /* Feste Höhe von 100% der Ansichtsfensterhöhe */
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            background-image: url('Abgedunkelt.png');
-            background-size: cover;
-            background-repeat: no-repeat;
-            background-position: center center;
-            color: #000; /* Beispielhafte Textfarbe für Kontrast */
-        }
-
-        .section-3 {
-            height: 100vh; /* Feste Höhe von 100% der Ansichtsfensterhöhe */
+        .section-1, .section-2, .section-3 {
+            height: 100vh;
             display: flex;
             justify-content: center;
             align-items: center;
             position: relative;
             overflow: hidden;
             z-index: 1;
-            
         }
-        .content {
-            padding: 20px;
-            text-align: center;
-            z-index: 2;
-            position: relative;
+        .section-1 {
+            background-image: url('Schwarz-Weiß.png');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center center;
+            color: #000;
         }
-        .video-background {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            overflow: hidden;
-            z-index: -1;
+        .section-2 {
+            background-image: url('Abgedunkelt.png');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center center;
+            color: #000;
         }
-        video {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            position: absolute;
-            top: 0;
-            left: 0;
+        .section-3 {
+            color: #000;
         }
+
+        
         header {
             background: #333;
             color: #fff;
             padding: 10px;
             text-align: center;
             display: flex;
-            justify-content: center; /* Zentrieren des Logos */
+            justify-content: center;
             align-items: center;
             flex-wrap: wrap;
         }
@@ -151,8 +125,8 @@
             background: rgba(255, 255, 255, 0.9);
             padding: 20px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            margin-top: 50px; /* Space for scrolling */
-            text-align: center; /* Zentrieren des Textes */
+            margin-top: 50px;
+            text-align: center;
         }
         footer {
             background: #333;
@@ -163,6 +137,7 @@
             width: 100%;
             bottom: 0;
         }
+
         .side-menu {
             position: fixed;
             top: 50%;
@@ -172,7 +147,7 @@
             padding: 20px;
             border-radius: 10px 0 0 10px;
             z-index: 10000;
-            display: none; /* Verstecke das Menü initial */
+            display: none;
         }
         .side-menu ul {
             list-style: none;
@@ -192,6 +167,7 @@
         .side-menu ul li a:hover {
             background: #FFA500;
         }
+
         .menu-toggle {
             position: fixed;
             top: 50%;
@@ -203,7 +179,7 @@
             border-radius: 10px 0 0 10px;
             cursor: pointer;
             z-index: 10001;
-            display: none; /* Verstecke den Menü-Button initial */
+            display: none;
         }
         .cta {
             margin-top: 20px;
@@ -229,101 +205,93 @@
         <div id="loading-percent">0%</div>
         <button onclick="start()" id="start-button">HIER GEHT ES LOS</button>
     </div>
-        <header>
-            <h1>Kuckucksgemeinschaft Altenritte e. V. </h1>
-            <img src="Kuckuck5.png" alt="Kuckucksgemeinschaft Logo">
-        </header>
-        <main>
-            <section class="section-1">
-                <div class="container">
-                     <section id="verein">
-                         <h2>Verein</h2>
-                         <p> 
-                                 Hi, wir sind ein neuer Verein, der sich der Gemeinschaft in Altenritte verpflichtet hat.<br><br>
-                                Wir laden alle Bewohner und Freunde von Altenritte herzlich ein, sich unserer Gemeinschaft anzuschließen. 
-                                Unser Ziel ist es, als Plattform der Zusammenkunft für Jung und Alt zu dienen. Wir möchten Altenritte, 
-                                die ortsansässigen Vereine und Institutionen durch gemeinsame Veranstaltungen und Zusammenarbeit auf gemeinnütziger Basis fördern, stärken und unterstützen. <br><br>
-                                Darüber hinaus wollen wir eine Brücke zwischen neu zugezogenen und alteingesessen Bürgern bauen, sowie Einblicke in die Traditionen unseres schönen Ortes vermitteln, um ein harmonisches 
-                                und lebendiges Miteinander als Gemeinschaft zu schaffen.
-                         </p>
-                     </section>
-                </div>
-            </section>
-    
-            <section class="section-2">
-                <div class="container">
-                     <section id="veranstaltungen">
-                        <h2>Veranstaltungen</h2>
-                        <p>Im nächsten Jahr steht unter dem Motto "RITTAHE2025" so einiges an, denn die Ortsteile Großenritte und Altenritte feiern 1-Jahr lang ihr 1250-Jahr-Jubiläum. Die Kuckucksgemeinschaft
-                                Altenritte e. V. hat sich der extra dafür gegründeten Jubiläumsgemeinschaft (<a href="https://rittahe2025.de" target="_blank">RITTAHE2025-Website</a>) angeschlossen. Zu diesem Anlass wollen wir uns gleich an 
-                                mehreren Veranstaltungen beteiligen und als Hauptveranstaltung das frühere "Kuckucksfest" vom 16.08.25 - 17.08.25 veranstalten. Wir stehen dazu in Absprache mit allen Beteiligten und 
-                                weiter Infos folgen.
-                        </p>
-                     </section>
-                </div>
-            </section>
-    
-            <section class="section-3">
-                <div class="video-background">
-                    <video autoplay loop muted>
-                        <source src="_Abstract White Background HD - motion graphics background loop - White video - Royalty Free Footages.mp4" type="video/mp4">
-                        Dein Browser unterstützt das Video-Tag nicht.
-                    </video>
-                </div>
-                <div class="content">
-                    <div class="container">
-                        <section id="mitgliedschaft">
-                            <h2>Mitgliedschaft</h2>
-                            <p>
-                                Aufnahmeanträge und Infos zur Vereinsmitgliedschaft sind in Bearbeitung und werden danach hier zu finden sein.
-                            </p>
-                        </section>
-                    </div>
-                </div>
-            </section>
-            
-            <section class="section-2">
-                <div class="container">
-                     <section id="ueber-uns">
-                         <h2>Über uns</h2>
-                         <p>
-                             Die Kuckucksgemeinschaft Altenritte e. V. setzt sich als Ziel, die Dorfgemeinschaft, das 
-                                Zusammenleben, die Gemeinschaft, die öffentliche Außenwahrnehmung und das kulturelle Erbe des
-                                Baunataler Ortsteils Altenritte zu pflegen, zu bewahren und zu fördern. Zwecke des Vereins sind: <br><br>
-                                (1) die Förderung von Kultur. <br>
-                                (2) die Förderung der Heimatpflege und der Ortsverschönerung. 
-                                - Verein: "Kuckucksgemeinschaft Altenritte e. V." <br><br>
-                                - Vereinssitz: 34225 Baunatal-Altenritte <br><br>
-                                - Gründung: Der Verein wurde am 07.06.2024 in Altenritte von 9 Gründungsmitgliedern gegründet. <br><br>
-                                - e. V. : Der Verein wurde am 01.07.2024 beim Amtsgericht Kassel in das Vereinsregister eingetragen. <br><br>
-                                - Gemeinnützigkeit: Der Verein hat die Prüfung auf Gemeinnützigkeit beim Finanzamt Kassel beantragt. <br><br>
-                        </p>
-                     </section>
-                </div>
-            </section>
+    <header>
+        <h1>Kuckucksgemeinschaft Altenritte e. V. </h1>
+        <img src="Kuckuck5.png" alt="Kuckucksgemeinschaft Logo">
+    </header>
+    <main>
+        <section class="section-1">
+            <div class="container">
+                <section id="verein">
+                    <h2>Verein</h2>
+                    <p>
+                        Hi, wir sind ein neuer Verein, der sich der Gemeinschaft in Altenritte verpflichtet hat.<br><br>
+                        Wir laden alle Bewohner und Freunde von Altenritte herzlich ein, sich unserer Gemeinschaft anzuschließen.
+                        Unser Ziel ist es, als Plattform der Zusammenkunft für Jung und Alt zu dienen. Wir möchten Altenritte,
+                        die ortsansässigen Vereine und Institutionen durch gemeinsame Veranstaltungen und Zusammenarbeit auf gemeinnütziger Basis fördern, stärken und unterstützen. <br><br>
+                        Darüber hinaus wollen wir eine Brücke zwischen neu zugezogenen und alteingesessen Bürgern bauen, sowie Einblicke in die Traditionen unseres schönen Ortes vermitteln, um ein harmonisches
+                        und lebendiges Miteinander als Gemeinschaft zu schaffen.
+                    </p>
+                </section>
+            </div>
+        </section>
 
-             <section class="section-1">
-                <div class="container">
-                    <section id="kontakt">
-                        <h2>Kontakt</h2>
-                        <p>
-                                Falls Sie uns bereits jetzt durch Spenden oder als Mitglied unterstützen möchten, melden Sie sich bitte unter <a href="mailto:kuckucksgemeinschaft@altenritte.com">kuckucksgemeinschaft@altenritte.com</a>.
-                        </p>
-                        <div class="cta">
-                <a href="mailto:kuckucksgemeinschaft@altenritte.com">Kontaktieren Sie uns</a>
-                        </div>
-                    </section>
-                </div>
-            </section>
-            
-            <section class="section-2">
-                <div class="container">
-                    <section id="spenden"><h2>Spenden</h2><p>Inhalte über Spenden und Sponsoring folgen.</p></section><br><br>
-                    <section id="gallerie"><h2>Gallerie</h2><p>Bilder und Videos folgen.</p></section><br><br>
-                    <section id="impressum"><h2>Impressum</h2><p>In Bearbeitung</p></section><br><br>
-                    <section id="datenschutz"><h2>Datenschutz</h2><p>In Bearbeitung</p></section><br><br>
-                </div>
-            </section>
+        <section class="section-2">
+            <div class="container">
+                <section id="veranstaltungen">
+                    <h2>Veranstaltungen</h2>
+                    <p>Im nächsten Jahr steht unter dem Motto "RITTAHE2025" so einiges an, denn die Ortsteile Großenritte und Altenritte feiern 1-Jahr lang ihr 1250-Jahr-Jubiläum. Die Kuckucksgemeinschaft
+                        Altenritte e. V. hat sich der extra dafür gegründeten Jubiläumsgemeinschaft (<a href="https://rittahe2025.de" target="_blank">RITTAHE2025-Website</a>) angeschlossen. Zu diesem Anlass wollen wir uns gleich an
+                        mehreren Veranstaltungen beteiligen und als Hauptveranstaltung das frühere "Kuckucksfest" vom 16.08.25 - 17.08.25 veranstalten. Wir stehen dazu in Absprache mit allen Beteiligten und
+                        weiter Infos folgen.
+                    </p>
+                </section>
+            </div>
+        </section>
+
+        <section class="section-1">
+            <div class="container">
+                <section id="mitgliedschaft">
+                      <h2>Mitgliedschaft</h2>
+                      <p>
+                          Aufnahmeanträge und Infos zur Vereinsmitgliedschaft sind in Bearbeitung und werden danach hier zu finden sein.
+                      </p>
+                </section>
+            </div>  
+        </section>
+
+        <section class="section-2">
+            <div class="container">
+                <section id="ueber-uns">
+                    <h2>Über uns</h2>
+                    <p>
+                        Die Kuckucksgemeinschaft Altenritte e. V. setzt sich als Ziel, die Dorfgemeinschaft, das
+                        Zusammenleben, die Gemeinschaft, die öffentliche Außenwahrnehmung und das kulturelle Erbe des
+                        Baunataler Ortsteils Altenritte zu pflegen, zu bewahren und zu fördern. Zwecke des Vereins sind: <br><br>
+                        (1) die Förderung von Kultur. <br>
+                        (2) die Förderung der Heimatpflege und der Ortsverschönerung. 
+                        - Verein: "Kuckucksgemeinschaft Altenritte e. V." <br><br>
+                        - Vereinssitz: 34225 Baunatal-Altenritte <br><br>
+                        - Gründung: Der Verein wurde am 07.06.2024 in Altenritte von 9 Gründungsmitgliedern gegründet. <br><br>
+                        - e. V. : Der Verein wurde am 01.07.2024 beim Amtsgericht Kassel in das Vereinsregister eingetragen. <br><br>
+                        - Gemeinnützigkeit: Der Verein hat die Prüfung auf Gemeinnützigkeit beim Finanzamt Kassel beantragt. <br><br>
+                    </p>
+                </section>
+            </div>
+        </section>
+
+        <section class="section-1">
+            <div class="container">
+                <section id="kontakt">
+                    <h2>Kontakt</h2>
+                    <p>
+                        Falls Sie uns bereits jetzt durch Spenden oder als Mitglied unterstützen möchten, melden Sie sich bitte unter <a href="mailto:kuckucksgemeinschaft@altenritte.com">kuckucksgemeinschaft@altenritte.com</a>.
+                    </p>
+                    <div class="cta">
+                        <a href="mailto:kuckucksgemeinschaft@altenritte.com">Kontaktieren Sie uns</a>
+                    </div>
+                </section>
+            </div>
+        </section>
+
+        <section class="section-2">
+            <div class="container">
+                <section id="spenden"><h2>Spenden</h2><p>Inhalte über Spenden und Sponsoring folgen.</p></section><br><br>
+                <section id="gallerie"><h2>Gallerie</h2><p>Bilder und Videos folgen.</p></section><br><br>
+                <section id="impressum"><h2>Impressum</h2><p>In Bearbeitung</p></section><br><br>
+                <section id="datenschutz"><h2>Datenschutz</h2><p>In Bearbeitung</p></section><br><br>
+            </div>
+        </section>
     </main>
     <footer>
         &copy; 2024 Kuckucksgemeinschaft Altenritte e. V. <b>-An dieser Seite wird aktuell gearbeitet-</b>
@@ -345,24 +313,21 @@
         Menü
     </div>
     <script>
-        // Preloader Script
         let percent = 0;
         let interval = setInterval(function() {
-            percent += 1; // Anstieg der Prozentzahl in 1er Schritten
+            percent += 1;
             document.getElementById('loading-percent').textContent = percent + '%';
             if (percent >= 100) {
                 clearInterval(interval);
                 document.getElementById('start-button').classList.add('show');
-                
             }
-        }, 20); // Ladedauer von etwa 8 Sekunden für 100%
+        }, 20);
 
-       function start() {
+        function start() {
             document.getElementById('preloader').style.display = 'none';
-           document.getElementById('menu-toggle').style.display = 'block'; // Zeige den Menü-Button nach dem Preloader
+            document.getElementById('menu-toggle').style.display = 'block';
         }
 
-        // Menu Toggle Script
         const menuToggle = document.getElementById('menu-toggle');
         const sideMenu = document.getElementById('side-menu');
 
