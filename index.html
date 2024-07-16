@@ -92,11 +92,37 @@
         }
 
         .section-3 {
-            background-image: url('Schwarz-Weiß.png');
-            background-size: cover;
-            background-repeat: no-repeat;
-            background-position: center center;
-            color: #000; /* Beispielhafte Textfarbe für Kontrast */
+            height: 100vh; /* Feste Höhe von 100% der Ansichtsfensterhöhe */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            overflow: hidden;
+            z-index: 1;
+            background-color: #000;
+        }
+        .content {
+            padding: 20px;
+            text-align: center;
+            z-index: 2;
+            position: relative;
+        }
+        .video-background {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            z-index: -1;
+        }
+        video {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            position: absolute;
+            top: 0;
+            left: 0;
         }
         header {
             background: #333;
@@ -237,14 +263,22 @@
                 </div>
             </section>
     
-            <section class="section-1">
-                <div class="container">
-                    <section id="mitgliedschaft">
-                        <h2>Mitgliedschaft</h2>
-                        <p>
-                            Aufnahmeanträge und Infos zur Vereinsmitgliedschaft sind in Bearbeitung und werden danach hier zu finden sein.
-                        </p>
-                    </section>
+            <section class="section-3">
+                <div class="video-background">
+                    <video autoplay loop muted>
+                        <source src="DeinVideo.mp4" type="video/mp4">
+                        Dein Browser unterstützt das Video-Tag nicht.
+                    </video>
+                </div>
+                <div class="content">
+                    <div class="container">
+                        <section id="mitgliedschaft">
+                            <h2>Mitgliedschaft</h2>
+                            <p>
+                                Aufnahmeanträge und Infos zur Vereinsmitgliedschaft sind in Bearbeitung und werden danach hier zu finden sein.
+                            </p>
+                        </section>
+                    </div>
                 </div>
             </section>
             
@@ -281,6 +315,7 @@
                     </section>
                 </div>
             </section>
+            
             <section class="section-2">
                 <div class="container">
                     <section id="spenden"><h2>Spenden</h2><p>Inhalte über Spenden und Sponsoring folgen.</p></section><br><br>
