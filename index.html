@@ -10,47 +10,95 @@
             margin: 0;
             padding: 0;
             line-height: 1.6;
-            background-color: #000; /* Schwarzer Hintergrund für den Bereich um das Video */
-            color: #fff; /* Weiße Textfarbe für den Inhalt */
-        }
-        .video-background {
+            background-image: url('Psycho_Deliverance_stunning_interpretation_of_a_maximum_ultra-p_efaaa7c2-ec38-4b29-921b-33c0634475b3.png');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-position: center;
+        #preloader {
             position: fixed;
             top: 0;
-            right: 0;
-            bottom: 0;
             left: 0;
-            overflow: hidden;
-            z-index: -1;
-        }
-        iframe {
             width: 100%;
             height: 100%;
-            position: absolute;
-            top: 0;
-            left: 0;
+            background: url('Schwarz-Weiß.png') #333 center no-repeat; /* Hintergrundbild für Preloader */
+            background-size: cover; /* Vollständige Abdeckung des Hintergrunds */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            z-index: 9999;
+            color: #fff;
         }
-        .content {
-            padding: 20px;
-            text-align: center;
+        #loading-text {
+            font-size: 24px;
+            margin-bottom: 20px;
+            padding: 10px; /* Umrandung */
+            background-color: rgba(0, 0, 0, 0.5); /* Umrandung */
+            border-radius: 5px; /* Umrandung */
+            color: #FFA500; /* Dunkel Gelb-Orange */
         }
-        section {
-            padding: 100px 0; /* Platzierung für Abschnitte anpassen */
+        #loading-percent {
+            font-size: 48px;
+            font-weight: bold;
+            margin-bottom: 20px;
+            padding: 10px; /* Umrandung */
+            background-color: rgba(0, 0, 0, 0.5); /* Umrandung */
+            border-radius: 5px; /* Umrandung */
+            color: #FFA500; /* Dunkel Gelb-Orange */
         }
-        /* Beispielhafte Stile für Abschnitte */
+        #preloader button {
+            padding: 10px 20px;
+            background: #fff;
+            color: #333;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            display: none; /* Verstecke den Menü-Button initial */
+            margin-top: 20px; /* Abstand zum Prozentwert */
+            border: 2px solid #fff; /* Umrandung */
+        }
+        #preloader button.show {
+            display: block;
+            animation: pulse 1s infinite;
+        }
+        @keyframes pulse {
+            0% { opacity: 0; }
+            50% { opacity: 1; }
+            100% { opacity: 0; }
+        }
         .section-1 {
-            background-color: #333; /* Dunkelgrauer Hintergrund für Abschnitt 1 */
-        }
-        .section-2 {
-            background-color: #666; /* Mittelgrauer Hintergrund für Abschnitt 2 */
-        }
-        .section-3 {
-            background-color: #999; /* Hellergrauer Hintergrund für Abschnitt 3 */
-        }
+    background-image: url('Schwarz-Weiß.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    color: #fff; /* Beispielhafte Textfarbe für Kontrast */
+}
+
+.section-2 {
+    background-image: url('Abgedunkelt.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    color: #000; /* Beispielhafte Textfarbe für Kontrast */
+}
+
+.section-3 {
+    background-image: url('Schwarz-Weiß.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    color: #fff; /* Beispielhafte Textfarbe für Kontrast */
+}
         header {
             background: #333;
             color: #fff;
             padding: 10px;
             text-align: center;
+            display: flex;
+            justify-content: center; /* Zentrieren des Logos */
+            align-items: center;
+            flex-wrap: wrap;
         }
         header img {
             height: 80px;
@@ -58,6 +106,19 @@
         }
         img {
             max-width: 100%; height: auto; 
+        }
+        main {
+            padding: 20px;
+            position: relative;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: rgba(255, 255, 255, 0.9);
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin-top: 50px; /* Space for scrolling */
+            text-align: center; /* Zentrieren des Textes */
         }
         footer {
             background: #333;
@@ -68,43 +129,165 @@
             width: 100%;
             bottom: 0;
         }
+        .side-menu {
+            position: fixed;
+            top: 50%;
+            right: 0;
+            transform: translateY(-50%);
+            background: rgba(51, 51, 51, 0.8);
+            padding: 20px;
+            border-radius: 10px 0 0 10px;
+            z-index: 10000;
+            display: none; /* Verstecke das Menü initial */
+        }
+        .side-menu ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        .side-menu ul li {
+            margin-bottom: 15px;
+        }
+        .side-menu ul li a {
+            color: #fff;
+            text-decoration: none;
+            padding: 10px 20px;
+            display: block;
+            border-radius: 5px;
+        }
+        .side-menu ul li a:hover {
+            background: #FFA500;
+        }
+        .menu-toggle {
+            position: fixed;
+            top: 50%;
+            right: 0;
+            transform: translateY(-50%);
+            background: #333;
+            color: #fff;
+            padding: 10px;
+            border-radius: 10px 0 0 10px;
+            cursor: pointer;
+            z-index: 10001;
+            display: none; /* Verstecke den Menü-Button initial */
+        }
     </style>
 </head>
 <body>
-    <div class="video-background">
-        <!-- Einbetten des YouTube-Videos mit einem iframe -->
-        <iframe src="https://www.youtube.com/embed/VIDEO_ID?autoplay=1&mute=1&controls=0&loop=1&playlist=VIDEO_ID" frameborder="0" allowfullscreen></iframe>
+    <div id="preloader">
+        <div id="loading-text">Ladevorgang...</div>
+        <div id="loading-percent">0%</div>
+        <button onclick="start()" id="start-button">HIER GEHT ES LOS</button>
     </div>
-    <div class="content">
         <header>
-            <h1>Kuckucksgemeinschaft Altenritte e. V.</h1>
+            <h1>Kuckucksgemeinschaft Altenritte e. V. </h1>
             <img src="Kuckuck5.png" alt="Kuckucksgemeinschaft Logo">
         </header>
         <main>
+            <div class="container">
+                <p>Willkommen auf der Seite der Kuckucksgemeinschaft Altenritte e. V.</p>
+                <section id="verein"><h2>Verein</h2><p> Hi, wir sind ein neuer Verein, der sich der Gemeinschaft in Altenritte verpflichtet hat.<br><br>
+                                Wir laden alle Bewohner und Freunde von Altenritte herzlich ein, sich unserer Gemeinschaft anzuschließen. 
+                                Unser Ziel ist es, als Plattform der Zusammenkunft für Jung und Alt zu dienen. Wir möchten Altenritte, 
+                                die ortsansässigen Vereine und Institutionen durch gemeinsame Veranstaltungen und Zusammenarbeit auf gemeinnütziger Basis fördern, stärken und unterstützen. <br><br>
+                                Darüber hinaus wollen wir eine Brücke zwischen neu zugezogenen und alteingesessen Bürgern bauen, sowie Einblicke in die Traditionen unseres schönen Ortes vermitteln, um ein harmonisches 
+                                und lebendiges Miteinander als Gemeinschaft zu schaffen.</p></section><br><br><br><br>
+                <section id="veranstaltungen"><h2>Veranstaltungen</h2><p>Im nächsten Jahr steht unter dem Motto "RITTAHE2025" so einiges an, denn die Ortsteile Großenritte und Altenritte feiern 1-Jahr lang ihr 1250-Jahr-Jubiläum. Die Kuckucksgemeinschaft
+                                Altenritte e. V. hat sich der extra dafür gegründeten Jubiläumsgemeinschaft (<a href="https://rittahe2025.de" target="_blank">RITTAHE2025-Website</a>) angeschlossen. Zu diesem Anlass wollen wir uns gleich an 
+                                mehreren Veranstaltungen beteiligen und als Hauptveranstaltung das frühere "Kuckucksfest" vom 16.08.25 - 17.08.25 veranstalten. Wir stehen dazu in Absprache mit allen Beteiligten und 
+                                weiter Infos folgen.</p></section><br><br><br><br>
+                <section id="mitgliedschaft"><h2>Mitgliedschaft</h2><p>Aufnahmeanträge und Infos zur Vereinsmitgliedschaft sind in Bearbeitung und werden danach hier zu finden sein.</p></section><br><br><br><br>
+                <section id="ueber-uns"><h2>Über uns</h2><p>Die Kuckucksgemeinschaft Altenritte e. V. setzt sich als Ziel, die Dorfgemeinschaft, das 
+                                Zusammenleben, die Gemeinschaft, die öffentliche Außenwahrnehmung und das kulturelle Erbe des
+                                Baunataler Ortsteils Altenritte zu pflegen, zu bewahren und zu fördern. Zwecke des Vereins sind: <br><br>
+                                (1) die Förderung von Kultur. <br>
+                                (2) die Förderung der Heimatpflege und der Ortsverschönerung. </p></section><br><br>
+                                - Verein: "Kuckucksgemeinschaft Altenritte e. V." <br><br>
+                                - Vereinssitz: 34225 Baunatal-Altenritte <br><br>
+                                - Gründung: Der Verein wurde am 07.06.2024 in Altenritte von 9 Gründungsmitgliedern gegründet. <br><br>
+                                - e. V. : Der Verein wurde am 01.07.2024 beim Amtsgericht Kassel in das Vereinsregister eingetragen. <br><br>
+                                - Gemeinnützigkeit: Der Verein hat die Prüfung auf Gemeinnützigkeit beim Finanzamt Kassel beantragt. <br><br><br><br>
+                <section id="kontakt"><h2>Kontakt</h2><p>
+                                Falls Sie uns bereits jetzt durch Spenden oder als Mitglied unterstützen möchten, melden Sie sich bitte unter <a href="mailto:kuckucksgemeinschaft@altenritte.com">kuckucksgemeinschaft@altenritte.com</a>.
+                            </p><br><br><br><br>
+                <section id="spenden"><h2>Spenden</h2><p>Inhalte über Spenden und Sponsoring folgen.</p></section><br><br><br><br>
+                <section id="gallerie"><h2>Gallerie</h2><p>Bilder und Videos folgen.</p></section><br><br><br><br>
+                <section id="impressum"><h2>Impressum</h2><p>In Bearbeitung</p></section><br><br><br><br>
+                <section id="datenschutz"><h2>Datenschutz</h2><p>In Bearbeitung</p></section><br><br><br><br>
+            </div>
+            <div class="container">
+                <p>In Bearbeitung</p><br><br><br><br><p>In Bearbeitung</p><br><br><br><br><p>In Bearbeitung</p><br><br><br><br><p>In Bearbeitung</p><br><br><br><br><p>In Bearbeitung</p><br><br><br><br><p>In Bearbeitung</p><br><br><br><br>
+            </div>
             <section class="section-1">
                 <div class="container">
                     <h2>Abschnitt 1</h2>
-                    <p>Inhalt für Abschnitt 1.</p>
+                    <p>In Bearbeitung</p><br><br><br><br><p>In Bearbeitung</p><br><br><br><br><p>In Bearbeitung</p><br><br><br><br><p>In Bearbeitung</p><br><br><br><br><p>In Bearbeitung</p><br><br><br><br><p>In Bearbeitung</p><br><br><br><br>
                 </div>
             </section>
     
             <section class="section-2">
                 <div class="container">
                     <h2>Abschnitt 2</h2>
-                    <p>Inhalt für Abschnitt 2.</p>
+                    <p>In Bearbeitung</p><br><br><br><br><p>In Bearbeitung</p><br><br><br><br><p>In Bearbeitung</p><br><br><br><br><p>In Bearbeitung</p><br><br><br><br><p>In Bearbeitung</p><br><br><br><br><p>In Bearbeitung</p><br><br><br><br>
                 </div>
             </section>
     
             <section class="section-3">
                 <div class="container">
                     <h2>Abschnitt 3</h2>
-                    <p>Inhalt für Abschnitt 3.</p>
+                    <p>In Bearbeitung</p><br><br><br><br><p>In Bearbeitung</p><br><br><br><br><p>In Bearbeitung</p><br><br><br><br><p>In Bearbeitung</p><br><br><br><br><p>In Bearbeitung</p><br><br><br><br><p>In Bearbeitung</p><br><br><br><br>
                 </div>
             </section>
-        </main>
-        <footer>
-            &copy; 2024 Kuckucksgemeinschaft Altenritte e. V.
-        </footer>
+            
+    </main>
+    <footer>
+        &copy; 2024 Kuckucksgemeinschaft Altenritte e. V. <b>-An dieser Seite wird aktuell gearbeitet-</b>
+    </footer>
+    <div class="side-menu" id="side-menu">
+        <ul>
+            <li><a href="#verein">Verein</a></li>
+            <li><a href="#veranstaltungen">Veranstaltungen</a></li>
+            <li><a href="#mitgliedschaft">Mitgliedschaft</a></li>
+            <li><a href="#ueber-uns">Über uns</a></li>
+            <li><a href="#kontakt">Kontakt</a></li>
+            <li><a href="#spenden">Spenden</a></li>
+            <li><a href="#gallerie">Gallerie</a></li>
+            <li><a href="#impressum">Impressum</a></li>
+            <li><a href="#datenschutz">Datenschutz</a></li>
+        </ul>
     </div>
+    <div class="menu-toggle" id="menu-toggle">
+        Menü
+    </div>
+    <script>
+        // Preloader Script
+        let percent = 0;
+        let interval = setInterval(function() {
+            percent += 1; // Anstieg der Prozentzahl in 1er Schritten
+            document.getElementById('loading-percent').textContent = percent + '%';
+            if (percent >= 100) {
+                clearInterval(interval);
+                document.getElementById('start-button').classList.add('show');
+                
+            }
+        }, 20); // Ladedauer von etwa 8 Sekunden für 100%
+
+       function start() {
+            document.getElementById('preloader').style.display = 'none';
+           document.getElementById('menu-toggle').style.display = 'block'; // Zeige den Menü-Button nach dem Preloader
+        }
+
+        // Menu Toggle Script
+        const menuToggle = document.getElementById('menu-toggle');
+        const sideMenu = document.getElementById('side-menu');
+
+        menuToggle.addEventListener('click', function() {
+            if (sideMenu.style.display === 'none' || sideMenu.style.display === '') {
+                sideMenu.style.display = 'block';
+            } else {
+                sideMenu.style.display = 'none';
+            }
+        });
+    </script>
 </body>
 </html>
