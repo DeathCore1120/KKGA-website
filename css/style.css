@@ -178,7 +178,7 @@ a:focus {
 .slider_section .detail-box .btn-box a:hover {
   background-color: transparent;
   border-color: #e93f1a;
-  color: #ffff00;
+  color: #e93f1a;
 }
 
 .slider_section #carouselExampleIndicators {
