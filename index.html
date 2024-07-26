@@ -1,352 +1,507 @@
 <!DOCTYPE html>
-<html lang="de">
+<html>
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kuckucksgemeinschaft Altenritte e. V.</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            line-height: 1.6;
-            /*background-image: url('Psycho_Deliverance_stunning_interpretation_of_a_maximum_ultra-p_efaaa7c2-ec38-4b29-921b-33c0634475b3.png');*/
-            background-size: cover;
-            background-repeat: no-repeat;
-            background-attachment: fixed;
-            background-position: center;
-            background-color: #222;
-            z-index: -5;
-        }
+  <!-- Basic -->
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <!-- Mobile Metas -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <!-- Site Metas -->
+  <meta name="keywords" content="" />
+  <meta name="description" content="" />
+  <meta name="author" content="" />
 
-        #preloader {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: url('Schwarz-Weiß.png') #333 center no-repeat;
-            background-size: cover;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            flex-direction: column;
-            z-index: 9999;
-            color: #fff;
-        }
-        #loading-text {
-            font-size: 24px;
-            margin-bottom: 20px;
-            padding: 10px;
-            background-color: rgba(0, 0, 0, 0.5);
-            border-radius: 5px;
-            color: #FFA500;
-        }
-        #loading-percent {
-            font-size: 48px;
-            font-weight: bold;
-            margin-bottom: 20px;
-            padding: 10px;
-            background-color: rgba(0, 0, 0, 0.5);
-            border-radius: 5px;
-            color: #FFA500;
-        }
-        #preloader button {
-            padding: 10px 20px;
-            background: #fff;
-            color: #333;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            display: none;
-            margin-top: 20px;
-            border: 2px solid #fff;
-        }
-        #preloader button.show {
-            display: block;
-            animation: pulse 1s infinite;
-        }
-        @keyframes pulse {
-            0% { opacity: 0; }
-            50% { opacity: 1; }
-            100% { opacity: 0; }
-        }
+  <title>Fregg</title>
 
-        .section-1, .section-2, .section-3 {
-            height: 100vh; /* 100% der Viewport-Höhe */
-            width: 100%; /* 100% der Elternbreite */
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            position: relative;
-            overflow: hidden;
-            z-index: -1;
-            /*margin-bottom: 30px;  Abstand nach unten zwischen den Sektionen */
-        }
-        .section-1 {
-            background-image: url('Schwarz-Weiß.png');
-            background-size: cover;
-            background-repeat: no-repeat;
-            background-position: center center;
-            color: #000;
-        }
-        .section-2 {
-            background-image: url('Abgedunkelt.png');
-            background-size: cover;
-            background-repeat: no-repeat;
-            background-position: center center;
-            color: #000;
-        }
-        .section-3 {
-            background-size: cover;
-            background-repeat: no-repeat;
-            background-position: center center;
-        }
+  <!-- slider stylesheet -->
+  <link rel="stylesheet" type="text/css"
+    href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.1.3/assets/owl.carousel.min.css" />
 
-        
-        header {
-            
-        }
-        header img {
-            
-        }
-        img {
-            max-width: 50%; height: auto; 
-        }
-        main {
-            padding: 20px;
-            position: relative;
-        }
-        .container {
-            max-width: 1000px;
-            margin: 0 auto;
-            background: rgba(255, 255, 255, 0.9);
-            /*padding: 20px;*/
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            /*margin-top: 50px;*/
-            text-align: center;
-        }
 
-        .container2 {
-            max-width: 1000px;
-            margin: 0 auto;
-            /*padding: 20px;*/
-            /*margin-top: 50px;*/
-            text-align: center;
-            font-size: 50px;
-        }
-        
-        .side-menu {
-            position: fixed;
-            top: 50%;
-            right: 0;
-            transform: translateY(-50%);
-            background: rgba(51, 51, 51, 0.8);
-            padding: 20px;
-            border-radius: 10px 0 0 10px;
-            z-index: 10000;
-            display: none;
-        }
-        .side-menu ul {
-            list-style: none;
-            padding: 0;
-            margin: 0;
-        }
-        .side-menu ul li {
-            margin-bottom: 15px;
-        }
-        .side-menu ul li a {
-            color: #fff;
-            text-decoration: none;
-            padding: 10px 20px;
-            display: block;
-            border-radius: 5px;
-        }
-        .side-menu ul li a:hover {
-            background: #FFA500;
-        }
-        
-        .menu-toggle {
-            position: fixed;
-            top: 50%;
-            right: 0;
-            transform: translateY(-50%);
-            background: #333;
-            color: #fff;
-            padding: 10px;
-            border-radius: 10px 0 0 10px;
-            cursor: pointer;
-            z-index: 10001;
-            display: none;
-        }
-        .cta {
-            margin-top: 20px;
-            text-align: center;
-        }
-        .cta a {
-            display: inline-block;
-            padding: 10px 20px;
-            margin: 10px 0;
-            background: #333;
-            color: #fff;
-            text-decoration: none;
-            border-radius: 5px;
-        }
-        .cta a:hover {
-            background: #555;
-        }
-        .video{
-            position:absolute;
-            right: 0;
-            bottom: 0;
-            z-index: -3;
-            background-image: linear-gradient(rgba(12,3,51,0.9),rgba(12,3,51,0.9));
-        }
-    </style>
+  <!-- font wesome stylesheet -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+
+  <!-- bootstrap core css -->
+  <link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
+
+  <!-- fonts style -->
+  <link href="https://fonts.googleapis.com/css?family=Poppins:400,600,700&display=swap" rel="stylesheet">
+  <!-- Custom styles for this template -->
+  <link href="css/style.css" rel="stylesheet" />
+  <!-- responsive style -->
+  <link href="css/responsive.css" rel="stylesheet" />
 </head>
+
 <body>
-    <div id="preloader">
-        <div id="loading-text">Ladevorgang...</div>
-        <div id="loading-percent">0%</div>
-        <button onclick="start()" id="start-button">HIER GEHT ES LOS</button>
-    </div>
-    <header>
+  <div class="hero_area">
+    <!-- header section strats -->
+    <header class="header_section">
+      <div class="container">
+        <nav class="navbar navbar-expand-lg custom_nav-container pt-3">
+          <a class="navbar-brand mr-5" href="index.html">
+            <img src="images/logo.png" alt="">
+            <span>
+              Fregg
+            </span>
+          </a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <div class="d-flex ml-auto flex-column flex-lg-row align-items-center">
+              <ul class="navbar-nav  ">
+                <li class="nav-item active">
+                  <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="about.html"> About </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="service.html"> Service </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="contact.html">Contact us</a>
+                </li>
+              </ul>
+              <form class="form-inline">
+                <button class="btn  my-2 my-sm-0 nav_search-btn" type="submit"></button>
+              </form>
+            </div>
+          </div>
+        </nav>
+      </div>
     </header>
-    <main>
-        <section class="section-3">
-            <div class="container2">
-                <video autoplay loop muted plays-inline class="video">
-                    <source src="4779866-hd_1920_1080_30fps.mp4" type"video/mp4"> 
-                </video>
-                <img src="Kuckuck5.png" alt="Kuckucksgemeinschaft Logo">
-                <h1>KUCKUCKSGEMEINSCHAFT ALTENRITTE e. V.</h1>
-            </div>
-        </section>
-        <section class="section-1">
+    <!-- end header section -->
+    <!-- slider section -->
+    <section class=" slider_section position-relative">
+      <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+        <ol class="carousel-indicators">
+          <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active">01</li>
+          <li data-target="#carouselExampleIndicators" data-slide-to="1">02</li>
+        </ol>
+        <div class="carousel-inner">
+          <div class="carousel-item active">
             <div class="container">
-                <section id="verein">
-                    <h2>Verein</h2>
-                    <p>
-                        Hi, wir sind ein neuer Verein, der sich der Gemeinschaft in Altenritte verpflichtet hat.<br><br>
-                        Wir laden alle Bewohner und Freunde von Altenritte herzlich ein, sich unserer Gemeinschaft anzuschließen.
-                        Unser Ziel ist es, als Plattform der Zusammenkunft für Jung und Alt zu dienen. Wir möchten Altenritte,
-                        die ortsansässigen Vereine und Institutionen durch gemeinsame Veranstaltungen und Zusammenarbeit auf gemeinnütziger Basis fördern, stärken und unterstützen. <br><br>
-                        Darüber hinaus wollen wir eine Brücke zwischen neu zugezogenen und alteingesessen Bürgern bauen, sowie Einblicke in die Traditionen unseres schönen Ortes vermitteln, um ein harmonisches
-                        und lebendiges Miteinander als Gemeinschaft zu schaffen.
-                    </p>
-                </section>
-            </div>
-        </section>
-
-        <section class="section-2">
-            <div class="container">
-                <section id="veranstaltungen">
-                    <h2>Veranstaltungen</h2>
-                    <p>Im nächsten Jahr steht unter dem Motto "RITTAHE2025" so einiges an, denn die Ortsteile Großenritte und Altenritte feiern 1-Jahr lang ihr 1250-Jahr-Jubiläum. Die Kuckucksgemeinschaft
-                        Altenritte e. V. hat sich der extra dafür gegründeten Jubiläumsgemeinschaft (<a href="https://rittahe2025.de" target="_blank">RITTAHE2025-Website</a>) angeschlossen. Zu diesem Anlass wollen wir uns gleich an
-                        mehreren Veranstaltungen beteiligen und als Hauptveranstaltung das frühere "Kuckucksfest" vom 16.08.25 - 17.08.25 veranstalten. Wir stehen dazu in Absprache mit allen Beteiligten und
-                        weiter Infos folgen.
-                    </p>
-                </section>
-            </div>
-        </section>
-
-        <section class="section-1">
-            <div class="container">
-                <section id="mitgliedschaft">
-                      <h2>Mitgliedschaft</h2>
+              <div class="row">
+                <div class="col-md-7">
+                  <div class="detail-box">
+                    <div>
+                      <h1>
+                        Welcome To <br>
+                        <span>
+                          Content Writing Services
+                        </span>
+                      </h1>
                       <p>
-                          Aufnahmeanträge und Infos zur Vereinsmitgliedschaft sind in Bearbeitung und werden danach hier zu finden sein.
+                        It is a long established fact that a reader will be distracted by the readable content of a page
+                        when looking
                       </p>
-                </section>
-            </div>  
-        </section>
-
-        <section class="section-2">
-            <div class="container">
-                <section id="ueber-uns">
-                    <h2>Über uns</h2>
-                    <p>
-                        Die Kuckucksgemeinschaft Altenritte e. V. setzt sich als Ziel, die Dorfgemeinschaft, das
-                        Zusammenleben, die Gemeinschaft, die öffentliche Außenwahrnehmung und das kulturelle Erbe des
-                        Baunataler Ortsteils Altenritte zu pflegen, zu bewahren und zu fördern. Zwecke des Vereins sind: <br><br>
-                        (1) die Förderung von Kultur. <br>
-                        (2) die Förderung der Heimatpflege und der Ortsverschönerung. 
-                        - Verein: "Kuckucksgemeinschaft Altenritte e. V." <br><br>
-                        - Vereinssitz: 34225 Baunatal-Altenritte <br><br>
-                        - Gründung: Der Verein wurde am 07.06.2024 in Altenritte von 9 Gründungsmitgliedern gegründet. <br><br>
-                        - e. V. : Der Verein wurde am 01.07.2024 beim Amtsgericht Kassel in das Vereinsregister eingetragen. <br><br>
-                        - Gemeinnützigkeit: Der Verein hat die Prüfung auf Gemeinnützigkeit beim Finanzamt Kassel beantragt. <br><br>
-                    </p>
-                </section>
-            </div>
-        </section>
-
-        <section class="section-1">
-            <div class="container">
-                <section id="kontakt">
-                    <h2>Kontakt</h2>
-                    <p>
-                        Falls Sie uns bereits jetzt durch Spenden oder als Mitglied unterstützen möchten, melden Sie sich bitte unter <a href="mailto:kuckucksgemeinschaft@altenritte.com">kuckucksgemeinschaft@altenritte.com</a>.
-                    </p>
-                    <div class="cta">
-                        <a href="mailto:kuckucksgemeinschaft@altenritte.com">Kontaktieren Sie uns</a>
+                      <div class="btn-box">
+                        <a href="" class="btn-1">
+                          Contact Us
+                        </a>
+                      </div>
                     </div>
-                </section>
+                  </div>
+                </div>
+              </div>
             </div>
-        </section>
-
-        <section class="section-2">
+          </div>
+          <div class="carousel-item">
             <div class="container">
-                <section id="spenden"><h2>Spenden</h2><p>Inhalte über Spenden und Sponsoring folgen.</p></section><br><br>
-                <section id="gallerie"><h2>Gallerie</h2><p>Bilder und Videos folgen.</p></section><br><br>
-                <section id="impressum"><h2>Impressum</h2><p>In Bearbeitung</p></section><br><br>
-                <section id="datenschutz"><h2>Datenschutz</h2><p>In Bearbeitung</p></section><br><br>
+              <div class="row">
+                <div class="col-md-7">
+                  <div class="detail-box">
+                    <div>
+                      <h1>
+                        Welcome To <br>
+                        <span>
+                          Content Writing Services
+                        </span>
+                      </h1>
+                      <p>
+                        It is a long established fact that a reader will be distracted by the readable content of a page
+                        when looking
+                      </p>
+                      <div class="btn-box">
+                        <a href="" class="btn-1">
+                          Contact Us
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
-        </section>
-    </main>
-    <div class="side-menu" id="side-menu">
-        <ul>
-            <li><a href="#verein">Verein</a></li>
-            <li><a href="#veranstaltungen">Veranstaltungen</a></li>
-            <li><a href="#mitgliedschaft">Mitgliedschaft</a></li>
-            <li><a href="#ueber-uns">Über uns</a></li>
-            <li><a href="#kontakt">Kontakt</a></li>
-            <li><a href="#spenden">Spenden</a></li>
-            <li><a href="#gallerie">Gallerie</a></li>
-            <li><a href="#impressum">Impressum</a></li>
-            <li><a href="#datenschutz">Datenschutz</a></li>
-        </ul>
+          </div>
+        </div>
+        <div class="custom_carousel-control">
+          <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+            <span class="sr-only">Previous</span>
+          </a>
+          <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+            <span class="sr-only">Next</span>
+          </a>
+        </div>
+      </div>
+    </section>
+    <!-- end slider section -->
+  </div>
+
+  <!-- about section -->
+
+  <section class="about_section layout_padding">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6">
+          <div class="detail-box">
+            <div class="heading_container">
+              <h2>
+                About Us
+              </h2>
+            </div>
+            <p>
+              It is a long established fact that a reader will be distracted by the readable content of a page when
+              looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of
+              letters, as opposed to using 'Content here, content here', making it look like readable English. Many
+              desktop publishing packages and web page editors now use Lorem Ipsum as their
+            </p>
+            <a href="">
+              Get Started
+            </a>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="img-box">
+            <img src="images/about-img.png" alt="">
+          </div>
+        </div>
+      </div>
     </div>
-    <div class="menu-toggle" id="menu-toggle">
-        Menü
+  </section>
+  <!-- end about section -->
+  <div class="body_bg layout_padding">
+
+    <!-- service section -->
+
+    <section class="service_section ">
+      <div class="container">
+        <div class="heading_container">
+          <h2>
+            At Your Service
+          </h2>
+        </div>
+      </div>
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6">
+            <div class="box">
+              <div class="img-box">
+                <img src="images/s-1.png" alt="">
+              </div>
+              <h4>
+                Written with Love
+              </h4>
+              <p>
+                It is a long established fact that a reader will be distracted by the readable content of a page when
+                looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution
+                of
+                letters, as opposed to using 'Content here, content t,
+              </p>
+              <a href="">
+                Read More
+              </a>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="box align-items-end align-items-md-start text-right text-md-left">
+              <div class="img-box">
+                <img src="images/s-2.png" alt="">
+              </div>
+              <h4>
+                Fast Turnaround
+              </h4>
+              <p>
+                It is a long established fact that a reader will be distracted by the readable content of a page when
+                looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution
+                of
+                letters, as opposed to using 'Content here, content here', making it look like
+              </p>
+              <a href="">
+                Read More
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-6">
+            <div class="box">
+              <div class="img-box">
+                <img src="images/s-3.png" alt="">
+              </div>
+              <h4>
+                Up to Date
+              </h4>
+              <p>
+                It is a long established fact that a reader will be distracted by the readable content of a page when
+                looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution
+                of
+                letters, as opposed to using 'Content here, content here', making it look like now use Lorem Ipsum as
+                their default model text,
+              </p>
+              <a href="">
+                Read More
+              </a>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="box align-items-end align-items-md-start text-right text-md-left">
+              <div class="img-box">
+                <img src="images/s-4.png" alt="">
+              </div>
+              <h4>
+                Premium Content
+              </h4>
+              <p>
+                It is a long established fact that a reader will be distracted by the readable content of a page when
+                looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution
+                of
+                letters, as opposed to using 'Content here, content here', making it look like
+              </p>
+              <a href="">
+                Read More
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- end service section -->
+
+    <!-- quote section -->
+
+    <section class="quote_section layout_padding">
+      <div class="container">
+        <div class="box">
+          <div class="detail-box">
+            <h3>
+              Get Your Quote Today!
+            </h3>
+            <p>
+              It is a long established fact that a reader will be distracted by the readable content of a page
+            </p>
+          </div>
+          <div class="btn-box">
+            <a href="">
+              Get A Quote
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- end quote section -->
+
+
+    <!-- contact section -->
+
+    <section class="contact_section">
+      <div class="container">
+        <div class="heading_container">
+          <h2>
+            Let's Get In Touch!
+          </h2>
+        </div>
+      </div>
+      <div class="container contact_bg layout_padding2-top">
+        <div class="row">
+          <div class="col-md-6">
+            <div class="contact_form ">
+              <form action="">
+                <input type="text" placeholder="Name ">
+                <input type="email" placeholder="Email">
+                <input type="text" placeholder="Message" class="message_input">
+                <button>
+                  Send
+                </button>
+              </form>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="img-box">
+              <img src="images/contact-img.jpg" alt="">
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- end contact section -->
+
+    <!-- client section -->
+
+    <section class="client_section layout_padding-top">
+      <div class="d-flex justify-content-center">
+        <div class="heading_container">
+          <h2>
+            Testimonial
+          </h2>
+        </div>
+      </div>
+      <div class="container layout_padding2">
+        <div id="carouselExample2Indicators" class="carousel slide" data-ride="carousel">
+          <ol class="carousel-indicators">
+            <li data-target="#carouselExample2Indicators" data-slide-to="0" class="active"></li>
+            <li data-target="#carouselExample2Indicators" data-slide-to="1"></li>
+            <li data-target="#carouselExample2Indicators" data-slide-to="2"></li>
+          </ol>
+          <div class="carousel-inner">
+            <div class="carousel-item ">
+              <div class="client_container">
+                <div class="client-id">
+                  <div class="img-box">
+                    <img src="images/client.jpg" alt="">
+                  </div>
+                  <div class="client_name">
+                    <div>
+                      <h3>
+                        Johndue
+                      </h3>
+                      <p>
+                        Farm & CO
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div class="client_detail">
+                  <div class="client_text">
+                    <blockquote>
+                      <p>
+                        ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+                        dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+                        aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit
+                      </p>
+                    </blockquote>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="carousel-item active">
+              <div class="client_container">
+                <div class="client-id">
+                  <div class="img-box">
+                    <img src="images/client.jpg" alt="">
+                  </div>
+                  <div class="client_name">
+                    <div>
+                      <h3>
+                        Johndue
+                      </h3>
+                      <p>
+                        Farm & CO
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div class="client_detail">
+                  <div class="client_text">
+                    <blockquote>
+                      <p>
+                        ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+                        dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+                        aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit
+                      </p>
+                    </blockquote>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="carousel-item ">
+              <div class="client_container">
+                <div class="client-id">
+                  <div class="img-box">
+                    <img src="images/client.jpg" alt="">
+                  </div>
+                  <div class="client_name">
+                    <div>
+                      <h3>
+                        Johndue
+                      </h3>
+                      <p>
+                        Farm & CO
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div class="client_detail">
+                  <div class="client_text">
+                    <blockquote>
+                      <p>
+                        ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+                        dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+                        aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit
+                      </p>
+                    </blockquote>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- end client section -->
+
+  </div>
+  <!-- info section -->
+
+  <section class="info_section layout_padding">
+    <div class="footer_contact">
+      <div class="heading_container">
+        <h2>
+          Contact Us
+        </h2>
+      </div>
+      <div class="box">
+        <a href="" class="img-box">
+          <img src="images/location.png" alt="" class="img-1">
+          <img src="images/location-o.png" alt="" class="img-2">
+        </a>
+        <a href="" class="img-box">
+          <img src="images/call.png" alt="" class="img-1">
+          <img src="images/call-o.png" alt="" class="img-2">
+        </a>
+        <a href="" class="img-box">
+          <img src="images/envelope.png" alt="" class="img-1">
+          <img src="images/envelope-o.png" alt="" class="img-2">
+        </a>
+      </div>
     </div>
-    <script>
-        let percent = 0;
-        let interval = setInterval(function() {
-            percent += 1;
-            document.getElementById('loading-percent').textContent = percent + '%';
-            if (percent >= 100) {
-                clearInterval(interval);
-                document.getElementById('start-button').classList.add('show');
-            }
-        }, 20);
 
-        function start() {
-            document.getElementById('preloader').style.display = 'none';
-            document.getElementById('menu-toggle').style.display = 'block';
-        }
 
-        const menuToggle = document.getElementById('menu-toggle');
-        const sideMenu = document.getElementById('side-menu');
+  </section>
 
-        menuToggle.addEventListener('click', function() {
-            if (sideMenu.style.display === 'none' || sideMenu.style.display === '') {
-                sideMenu.style.display = 'block';
-            } else {
-                sideMenu.style.display = 'none';
-            }
-        });
-    </script>
+
+  <!-- end info section -->
+
+  <!-- footer section -->
+  <section class="container-fluid footer_section">
+    <p>
+      Copyright &copy; 2019 All Rights Reserved By
+      <a href="https://html.design/">Free Html Templates</a>
+    </p>
+  </section>
+  <!-- footer section -->
+
+  <script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
+  <script type="text/javascript" src="js/bootstrap.js"></script>
+
 </body>
+
 </html>
