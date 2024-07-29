@@ -321,15 +321,17 @@
           <div class="col-md-6">
             <div class="contact_form ">
               <form action="https://formspree.io/f/mldrbrza" method="POST">
-    <!--            <input type="text" placeholder="Name " required>
-                <input type="email" placeholder="Email" required>
-                <input type="text" placeholder="Nachricht" required class="message_input">
+    <!--            <input type="text" placeholder="Name " >
+                <input type="email" placeholder="Email" >
+                <input type="text" placeholder="Nachricht" class="message_input">
                 <button>
                   Senden
                 </button>   -->
                 <input type="text" name="name" placeholder="Name" required>
                 <input type="email" name="email" placeholder="Email" required>
-                <textarea name="message" class="message_input placeholder="Nachricht" required ></textarea>
+                <div class="contact_form ">
+                    <textarea name="message" placeholder="Nachricht" required ></textarea>
+                </div>
                 <button type="submit">Senden</button>
               </form>
             </div>
