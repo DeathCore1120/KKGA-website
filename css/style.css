@@ -61,12 +61,12 @@ body {
     width: 100%;
     float: left;
 }
-.images_section{
+.images_section10x{
     width: 100%;
     float: left;
 }
 
-.image {
+.image10x {
   opacity: 1;
   display: block;
   width: 100%;
@@ -75,7 +75,7 @@ body {
   backface-visibility: hidden;
 }
 
-.middle {
+.middle10x {
   transition: .5s ease;
   opacity: 0;
   position: absolute;
@@ -86,23 +86,23 @@ body {
   text-align: center;
 }
 
-.container_1:hover .image {
+.container_10x:hover .image {
   opacity: 0.3;
   background-color: rgba(233, 230, 26, 0.8) !important;
 
 }
 
-.container_1:hover .middle {
+.container_10x:hover .middle {
   opacity: 1;
   z-index: 2;
 }
 
 
 
-.container_1{
+.container_10x{
     position: relative;
 }
-.container_1::after{
+.container_10x::after{
     display: none;
     content: '';
     position: absolute;
@@ -114,7 +114,7 @@ body {
 
 }
 
-.container_1:hover::after{
+.container_10x:hover::after{
     display: block;
 }
 
