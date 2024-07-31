@@ -86,13 +86,13 @@ body {
   text-align: center;
 }
 
-.container_10X:hover .image {
+.container_10X:hover .image10X {
   opacity: 0.3;
   background-color: rgba(233, 230, 26, 0.8) !important;
 
 }
 
-.container_10X:hover .middle {
+.container_10X:hover .middle10X {
   opacity: 1;
   z-index: 2;
 }
