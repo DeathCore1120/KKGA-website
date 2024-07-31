@@ -63,9 +63,10 @@ body {
 
 .custom_nav-container.navbar-expand-lg .navbar-nav .nav-item .nav-link {
   padding: 10px 30px;
-  color: #ffffff;
+  color: #e9e61a;
   text-align: center;
   text-transform: uppercase;
+  
 }
 
 a,
