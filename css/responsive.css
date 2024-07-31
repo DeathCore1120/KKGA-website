@@ -24,21 +24,7 @@
         height: 100%;
     }
 }
-    .desktop-title {
-      display: block;
-    }
-    .mobile-title {
-      display: none;
-    }
-    
-    @media (max-width: 768px) {
-      .desktop-title {
-        display: none;
-      }
-      .mobile-title {
-        display: block;
-      }
-    }
+  
 
 @media (max-width: 768px) {
 
