@@ -66,10 +66,12 @@ body {
   color: #ffffff;
   text-align: center;
   text-transform: uppercase;
-  hover: #e9e61a;
+
   
 }
-
+.custom_nav-container.navbar-expand-lg .navbar-nav .nav-item .nav-link:hover {
+  color: #e9e61a; /* Setze hier die gewünschte Hover-Farbe ein */
+}
 
 a,
 a:hover,
