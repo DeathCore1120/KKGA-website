@@ -53,7 +53,15 @@ body {
 }
 /* Setze hier die gewünschte Hover-Farbe ein */
 
-
+.layout_padding {
+     padding-bottom: 0px;
+}
+.padding_0{
+    padding: 0px;
+}
+.padding_left_0{
+    padding-left: 100px;
+}
 
 .portfolio_section{
     width: 100%;
