@@ -52,16 +52,6 @@ body {
   height: auto;
 }
 /* Setze hier die gewünschte Hover-Farbe ein */
-.layout_padding {
-     padding-top: 90px;
-     padding-bottom: 0px;
-}
-.padding_0{
-    padding: 0px;
-}
-.padding_left_0{
-    padding-left: 100px;
-}
 
 
 
