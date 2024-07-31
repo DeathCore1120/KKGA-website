@@ -380,7 +380,7 @@ a:focus {
 }
 
 .body_bg {
-  background-image: url(images/body_bg.jpg);
+  background-image: url(../images/body_bg.jpg);
   background-size: cover;
 }
 
