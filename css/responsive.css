@@ -49,7 +49,11 @@
         width: 100%;
     }
 
-
+    .scroll-down img {
+	display: none;
+        
+    }
+    
     .quote_section .box {
 
         flex-direction: column;
