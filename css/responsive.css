@@ -72,6 +72,16 @@
     .footer_section2 .container {
 	padding-left: 20px;
     }
+
+    .footer_section2 .row {
+        display: block;
+        text-align: center;
+    }
+
+    .footer_section2 p {
+        text-align: center;
+        padding-bottom: 10px;
+    }
 }
 
 @media (max-width: 576px) {}
