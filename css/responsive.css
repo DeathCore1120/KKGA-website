@@ -68,6 +68,10 @@
     .client_section .client_container {
         width: 100%;
     }
+
+    .footer_section2 .container {
+	padding-left: 20px;
+    }
 }
 
 @media (max-width: 576px) {}
