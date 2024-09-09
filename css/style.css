@@ -916,6 +916,29 @@ a:focus {
   color: #000000;
 }
 
+main {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+#header-impressum {
+    background-color: #363636;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    display: flex;                 /* Flexbox für Layout */
+    justify-content: space-between;/* Platzierung: Logo links, Navigation rechts */
+    align-items: center;           /* Vertikale Zentrierung */
+   
+}
+
+
+#header-impressum .logo img {
+    max-width: 100px;
+    height: auto;
+}
 
 /*scroll down*/
 /*# sourceMappingURL=style.css.map */
