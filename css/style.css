@@ -940,5 +940,9 @@ main {
     height: auto;
 }
 
+.carousel-item .img-box img{
+   max-width: 400px;
+    height: auto;
+}
 /*scroll down*/
 /*# sourceMappingURL=style.css.map */
