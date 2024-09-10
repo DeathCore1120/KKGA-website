@@ -232,6 +232,28 @@
 			</div>
 		</div>
 	</div>
+<script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const options = {
+                root: null, // viewport als root
+                rootMargin: '0px',
+                threshold: 0.1 // Prozent der Sichtbarkeit, um den Callback auszulösen
+            };
+
+            const observer = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                        observer.unobserve(entry.target); // Entfernt die Überwachung nach dem ersten Einblenden
+                    }
+                });
+            }, options);
+
+            document.querySelectorAll('.timeline-content').forEach(element => {
+                observer.observe(element);
+            });
+        });
+</script>
 </section>
 
   <!-- end timeline section -->
