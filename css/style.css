@@ -998,6 +998,11 @@ main {
     background-color: #2f363e;
 	padding: 30px;
 	border-radius: 5px;
+	border: 2px solid transparent; /* Füge einen transparenten Rand hinzu, um den Rand zu reservieren */
+        transition: border-color 0.3s ease; /* Optional: füge eine sanfte Übergangsanimation hinzu */
+}
+.timeline-content:hover {
+    border-color: #e9e61a; /* Ändert die Randfarbe beim Hover */
 }
 .timeline-content h3{
     font-size: 20px;
