@@ -994,15 +994,36 @@ main {
 	color: #e9e61a;
 	margin:6px 0 15px;
 }
-.timeline-content{
-    background-color: #2f363e;
-	padding: 30px;
-	border-radius: 5px;
-	border: 2px solid transparent; /* Füge einen transparenten Rand hinzu, um den Rand zu reservieren */
-        transition: border-color 0.3s ease; /* Optional: füge eine sanfte Übergangsanimation hinzu */
+@keyframes slideInFromBottom {
+    0% {
+        transform: translateY(100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
 }
+
+/* Stil für die Boxen */
+.timeline-content {
+    background-color: #2f363e;
+    padding: 30px;
+    border-radius: 5px;
+    border: 2px solid transparent;
+    transition: border-color 0.3s ease;
+    opacity: 0; /* Anfangs unsichtbar */
+    transform: translateY(100%);
+}
+
+/* Animierte Boxen */
+.timeline-content.visible {
+    animation: slideInFromBottom 0.5s ease-out forwards;
+}
+
+/* Hover-Effekt für den Rand */
 .timeline-content:hover {
-    border-color: #e9e61a; /* Ändert die Randfarbe beim Hover */
+    border-color: #e9e61a;
 }
 .timeline-content h3{
     font-size: 20px;
