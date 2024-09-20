@@ -97,6 +97,10 @@
 	.timeline-dot{
 		left:0;
     }
+	.button_section .right-buttons {
+                padding-left: 0px;
+    
+    }
 }
 
 @media (max-width: 576px) {}
