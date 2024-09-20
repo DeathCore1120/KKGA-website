@@ -1038,5 +1038,61 @@ main {
 	font-weight: 300;
 	line-height: 22px;
 }
+
+.button_section{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+     background-image: url('../images/back_gelb.png');
+    background-size: cover;  /* Bild vollständig einpassen */
+    background-position: center; /* Bild zentrieren */
+    background-repeat: no-repeat; /* Keine Wiederholung */
+    color: white;
+    text-align: center;
+}
+
+.right-buttons {
+    display: flex;
+    flex-direction: column;  /* Buttons untereinander */
+    gap: 40px;  /* Abstand zwischen den Buttons */
+    padding-left: 400px;
+}
+
+.download-button {
+    padding: 10px 20px;
+    
+    text-align: center;
+    background-color: #333;  /* Standardbuttonfarbe */
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    border: 1px solid;
+    border-color: #e9e61a;
+    transition: background-color 0.3s;  /* Für sanften Hover-Effekt */
+ 
+}
+
+.download-button:hover {
+    background-color: #555;  /* Hover-Effekt anpassbar */
+}
+
+
+.button_section .row {
+    justify-content: center;
+    
+}
+
+.blocker_section{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 2vh;
+    background-color: #363636;
+    
+    color: #e9e61a;
+    text-align: center;
+}
+
 /*scroll down*/
 /*# sourceMappingURL=style.css.map */
