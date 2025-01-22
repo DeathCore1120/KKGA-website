@@ -44,7 +44,7 @@ body {
 /*header section*/
 .hero_area {
   height: 100vh;
-  background-image: url("../images/a .png");
+  background-image: url("../images/a .jpg");
   background-size: cover;
 }
 
@@ -1044,7 +1044,7 @@ main {
     justify-content: center;
     align-items: center;
     height: 100vh;
-     background-image: url('../images/back_gelb.png');
+     background-image: url('../images/back_gelb.jpg');
     background-size: cover;  /* Bild vollständig einpassen */
     background-position: center; /* Bild zentrieren */
     background-repeat: no-repeat; /* Keine Wiederholung */
