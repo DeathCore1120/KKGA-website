@@ -1289,17 +1289,22 @@ main {
   border-color: #363636;
 }
 
-.termine-day.has-event::after {
-  content: '';
-  position: absolute;
-  width: 7px;
-  height: 7px;
-  left: 50%;
-  bottom: 7px;
-  transform: translateX(-50%);
+.day.has-event {
   background: #e9e61a;
-  border-radius: 50%;
-  box-shadow: 0 0 0 3px rgba(233, 230, 26, .18);
+  border-color: #d4d100;
+  color: #000000;
+  font-weight: 700;
+  box-shadow: 0 4px 10px rgba(233, 230, 26, 0.35);
+}
+
+.day.has-event::after {
+  display: none;
+}
+
+.day.has-event.is-selected {
+  background: #363636;
+  color: #ffffff;
+  border-color: #363636;
 }
 
 .termine-calendar-legend {
