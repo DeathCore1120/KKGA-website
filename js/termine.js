@@ -293,6 +293,79 @@ const termine = [
     });
   });
 
-  renderCalendar();
-  renderEvents();
+  let overviewYear = currentDate.getFullYear();
+
+function renderYearOverview() {
+  const yearLabel = document.getElementById('yearOverviewLabel');
+  const yearList = document.getElementById('yearOverviewList');
+
+  if (!yearLabel || !yearList) return;
+
+  yearLabel.textContent = overviewYear;
+  yearList.innerHTML = '';
+
+  const today = new Date();
+  today.setHours(0, 0, 0, 0);
+
+  const yearEvents = termine
+    .filter(event => toDate(event.start).getFullYear() === overviewYear)
+    .sort((a, b) => toDate(a.start) - toDate(b.start));
+
+  if (yearEvents.length === 0) {
+    yearList.innerHTML = `
+      <div class="termine-year-empty">
+        Für dieses Jahr sind aktuell keine Termine eingetragen.
+      </div>
+    `;
+    return;
+  }
+
+  yearEvents.forEach(event => {
+    const start = toDate(event.start);
+    const end = toDate(event.ende);
+    const isPast = end < today;
+
+    const dateText = event.start === event.ende
+      ? start.toLocaleDateString('de-DE')
+      : `${start.toLocaleDateString('de-DE')} – ${end.toLocaleDateString('de-DE')}`;
+
+    const row = document.createElement('article');
+    row.className = `termine-year-row ${isPast ? 'is-past' : ''}`;
+
+    row.innerHTML = `
+      <div class="termine-year-date">${dateText}</div>
+      <div class="termine-year-title">
+        <strong>${event.titel}</strong>
+        <span>${event.untertitel || ''}</span>
+      </div>
+      <div class="termine-year-place">
+        <i class="fa-solid fa-location-dot"></i> ${event.ort}
+      </div>
+      <div class="termine-year-status">
+        ${isPast ? 'Vergangen' : event.statusText}
+      </div>
+    `;
+
+    yearList.appendChild(row);
+  });
+}
+
+document.getElementById('prevYear')?.addEventListener('click', () => {
+  overviewYear--;
+  renderYearOverview();
+});
+
+document.getElementById('nextYear')?.addEventListener('click', () => {
+  overviewYear++;
+  renderYearOverview();
+});
+
+document.getElementById('currentYearButton')?.addEventListener('click', () => {
+  overviewYear = new Date().getFullYear();
+  renderYearOverview();
+});
+  
+renderCalendar();
+renderEvents();
+renderYearOverview();
 })();
