@@ -1094,5 +1094,549 @@ main {
     text-align: center;
 }
 
+/* =========================================================
+   Moderne Terminseite / Vereinskalender
+   Diese Styles unten an css/style.css anhängen.
+   ========================================================= */
+
+.termine-modern-section {
+  background: radial-gradient(circle at top right, rgba(233, 230, 26, 0.16), transparent 32%), #f0f0f1;
+  padding: 80px 0 90px;
+}
+
+.termine-modern-container {
+  max-width: 1180px;
+}
+
+.termine-intro-card,
+.termine-calendar-card,
+.termine-events-card,
+.termine-admin-hint {
+  background: #ffffff;
+  border-radius: 24px;
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.09);
+}
+
+.termine-intro-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 24px;
+  padding: 30px;
+  margin-bottom: 24px;
+  border-left: 7px solid #e9e61a;
+}
+
+.termine-kicker {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  color: #363636;
+  font-size: 14px;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.termine-intro-card h2 {
+  margin: 0;
+  color: #2a2a2a;
+  font-size: clamp(26px, 4vw, 42px);
+  font-weight: 700;
+}
+
+.termine-intro-card p {
+  max-width: 760px;
+  margin: 12px 0 0;
+  color: #656c74;
+  line-height: 1.7;
+}
+
+.termine-top-button,
+.termine-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  border-radius: 999px;
+  border: 1px solid transparent;
+  font-weight: 600;
+  transition: transform .2s ease, box-shadow .2s ease, background .2s ease;
+}
+
+.termine-top-button:hover,
+.termine-button:hover {
+  transform: translateY(-2px);
+}
+
+.termine-top-button {
+  white-space: nowrap;
+  padding: 12px 18px;
+  background: #363636;
+  color: #ffffff;
+}
+
+.termine-top-button:hover {
+  color: #000000;
+  background: #e9e61a;
+}
+
+.termine-calendar-layout {
+  display: grid;
+  grid-template-columns: 390px minmax(0, 1fr);
+  gap: 24px;
+  align-items: start;
+}
+
+.termine-calendar-card {
+  overflow: hidden;
+  position: sticky;
+  top: 20px;
+}
+
+.termine-calendar-head {
+  background: #363636;
+  color: #ffffff;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.termine-calendar-head strong {
+  display: block;
+  font-size: 20px;
+  line-height: 1.2;
+}
+
+.termine-calendar-head span {
+  display: block;
+  color: rgba(255,255,255,.68);
+  font-size: 13px;
+  margin-top: 4px;
+}
+
+.termine-calendar-nav {
+  display: flex;
+  gap: 8px;
+}
+
+.termine-calendar-nav button {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  border: 1px solid rgba(255,255,255,.22);
+  background: rgba(255,255,255,.08);
+  color: #ffffff;
+  cursor: pointer;
+  transition: background .2s ease, color .2s ease;
+}
+
+.termine-calendar-nav button:hover {
+  background: #e9e61a;
+  color: #000000;
+}
+
+.termine-calendar-body {
+  padding: 18px;
+}
+
+.termine-weekdays,
+.termine-calendar-grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 8px;
+}
+
+.termine-weekdays {
+  margin-bottom: 8px;
+  color: #656c74;
+  font-size: 12px;
+  font-weight: 700;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.termine-day {
+  position: relative;
+  min-height: 44px;
+  border: 1px solid #ececef;
+  background: #fafafa;
+  border-radius: 14px;
+  font: inherit;
+  color: #2a2a2a;
+  cursor: pointer;
+  transition: border-color .2s ease, background .2s ease, transform .2s ease;
+}
+
+.termine-day:hover {
+  transform: translateY(-1px);
+  border-color: #e9e61a;
+}
+
+.termine-day.is-outside {
+  opacity: .35;
+}
+
+.termine-day.is-today {
+  border-color: #363636;
+  font-weight: 700;
+}
+
+.termine-day.is-selected {
+  background: #363636;
+  color: #ffffff;
+  border-color: #363636;
+}
+
+.termine-day.has-event::after {
+  content: '';
+  position: absolute;
+  width: 7px;
+  height: 7px;
+  left: 50%;
+  bottom: 7px;
+  transform: translateX(-50%);
+  background: #e9e61a;
+  border-radius: 50%;
+  box-shadow: 0 0 0 3px rgba(233, 230, 26, .18);
+}
+
+.termine-calendar-legend {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 18px;
+  color: #656c74;
+  font-size: 13px;
+}
+
+.termine-dot {
+  width: 9px;
+  height: 9px;
+  display: inline-block;
+  border-radius: 50%;
+  background: #e9e61a;
+  margin-right: 6px;
+}
+
+.termine-events-card {
+  padding: 22px;
+}
+
+.termine-events-head {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 18px;
+  margin-bottom: 20px;
+}
+
+.termine-events-head h2 {
+  margin: 0;
+  color: #2a2a2a;
+  font-size: clamp(24px, 3vw, 34px);
+  line-height: 1.2;
+  font-weight: 700;
+}
+
+.termine-events-head h2 span {
+  color: #363636;
+  border-bottom: 4px solid #e9e61a;
+}
+
+.termine-events-head p {
+  margin: 8px 0 0;
+  color: #656c74;
+  line-height: 1.6;
+}
+
+.termine-filter {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+}
+
+.termine-filter button {
+  border: 1px solid #e4e4e4;
+  border-radius: 999px;
+  background: #ffffff;
+  padding: 9px 13px;
+  font-size: 13px;
+  font-weight: 600;
+  color: #656c74;
+  cursor: pointer;
+}
+
+.termine-filter button.is-active {
+  background: #e9e61a;
+  color: #000000;
+  border-color: #e9e61a;
+}
+
+.termine-event-list {
+  display: grid;
+  gap: 16px;
+}
+
+.termine-event-card {
+  display: grid;
+  grid-template-columns: 118px minmax(0, 1fr) 180px;
+  gap: 18px;
+  border: 1px solid #ececef;
+  border-radius: 20px;
+  padding: 14px;
+  background: linear-gradient(180deg, #fff, #fbfbfb);
+  transition: transform .2s ease, box-shadow .2s ease, border-color .2s ease;
+}
+
+.termine-event-card:hover {
+  transform: translateY(-2px);
+  border-color: rgba(233, 230, 26, .75);
+  box-shadow: 0 10px 25px rgba(0,0,0,.08);
+}
+
+.termine-date-tile {
+  border-radius: 16px;
+  background: #363636;
+  color: #ffffff;
+  min-height: 118px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 12px;
+}
+
+.termine-day-number {
+  font-size: 30px;
+  font-weight: 700;
+  line-height: 1;
+  color: #e9e61a;
+}
+
+.termine-month {
+  margin-top: 7px;
+  font-size: 13px;
+  text-transform: uppercase;
+  letter-spacing: .08em;
+}
+
+.termine-year {
+  color: rgba(255,255,255,.65);
+  font-size: 12px;
+  margin-top: 3px;
+}
+
+.termine-status {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  border-radius: 999px;
+  padding: 6px 10px;
+  font-size: 12px;
+  font-weight: 700;
+  background: rgba(233,230,26,.22);
+  color: #343400;
+  margin-bottom: 9px;
+}
+
+.termine-status.closed {
+  background: #efefef;
+  color: #707070;
+}
+
+.termine-event-content h3 {
+  margin: 0;
+  font-size: 21px;
+  font-weight: 700;
+  color: #2a2a2a;
+}
+
+.termine-subtitle {
+  margin: 4px 0 12px;
+  color: #656c74;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.termine-meta {
+  display: grid;
+  gap: 7px;
+  color: #424242;
+  font-size: 14px;
+}
+
+.termine-meta span {
+  display: flex;
+  gap: 9px;
+  align-items: flex-start;
+}
+
+.termine-meta i {
+  color: #8c8c8c;
+  width: 16px;
+  margin-top: 3px;
+}
+
+.termine-event-content p {
+  margin: 12px 0 0;
+  color: #656c74;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.termine-event-side {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.termine-event-image {
+  width: 100%;
+  height: 110px;
+  object-fit: cover;
+  border-radius: 16px;
+  background: #dddddd;
+}
+
+.termine-event-actions {
+  display: grid;
+  gap: 8px;
+}
+
+.termine-button {
+  width: 100%;
+  padding: 10px 12px;
+  font-size: 13px;
+}
+
+.termine-button-dark {
+  background: #363636;
+  color: #ffffff;
+}
+
+.termine-button-dark:hover {
+  color: #000000;
+  background: #e9e61a;
+}
+
+.termine-button-yellow {
+  background: #e9e61a;
+  color: #000000;
+}
+
+.termine-empty {
+  display: none;
+  border: 1px dashed #cfcfcf;
+  border-radius: 20px;
+  padding: 28px;
+  text-align: center;
+  color: #656c74;
+  background: #fbfbfb;
+}
+
+.termine-admin-hint {
+  margin-top: 24px;
+  border-left: 6px solid #e9e61a;
+  padding: 18px 20px;
+  color: #656c74;
+  line-height: 1.6;
+}
+
+.termine-admin-hint strong {
+  color: #2a2a2a;
+}
+
+@media (max-width: 980px) {
+  .termine-calendar-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .termine-calendar-card {
+    position: static;
+  }
+
+  .termine-event-card {
+    grid-template-columns: 104px minmax(0, 1fr);
+  }
+
+  .termine-event-side {
+    grid-column: 1 / -1;
+    display: grid;
+    grid-template-columns: 180px 1fr;
+    align-items: center;
+  }
+}
+
+@media (max-width: 680px) {
+  .termine-modern-section {
+    padding: 48px 0 60px;
+  }
+
+  .termine-intro-card,
+  .termine-events-head {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .termine-filter {
+    justify-content: flex-start;
+  }
+
+  .termine-calendar-head {
+    padding: 16px;
+  }
+
+  .termine-calendar-body,
+  .termine-events-card {
+    padding: 12px;
+  }
+
+  .termine-weekdays,
+  .termine-calendar-grid {
+    gap: 5px;
+  }
+
+  .termine-day {
+    min-height: 40px;
+    border-radius: 11px;
+    font-size: 13px;
+  }
+
+  .termine-event-card {
+    grid-template-columns: 1fr;
+    padding: 12px;
+  }
+
+  .termine-date-tile {
+    min-height: auto;
+    flex-direction: row;
+    justify-content: flex-start;
+    gap: 10px;
+  }
+
+  .termine-day-number {
+    font-size: 24px;
+  }
+
+  .termine-month,
+  .termine-year {
+    margin-top: 0;
+  }
+
+  .termine-event-side {
+    grid-column: auto;
+    grid-template-columns: 1fr;
+  }
+
+  .termine-event-image {
+    height: 170px;
+  }
+}
+
+
 /*scroll down*/
 /*# sourceMappingURL=style.css.map */
