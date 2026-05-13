@@ -1289,7 +1289,7 @@ main {
   border-color: #363636;
 }
 
-.day.has-event {
+.termine-day.has-event {
   background: #e9e61a;
   border-color: #d4d100;
   color: #000000;
@@ -1297,11 +1297,11 @@ main {
   box-shadow: 0 4px 10px rgba(233, 230, 26, 0.35);
 }
 
-.day.has-event::after {
+.termine-day.has-event::after {
   display: none;
 }
 
-.day.has-event.is-selected {
+.termine-day.has-event.is-selected {
   background: #363636;
   color: #ffffff;
   border-color: #363636;
