@@ -238,7 +238,29 @@
     </div>
   </section>
   <!-- end termine kalender section -->
+  <!-- Jahres section -->
+  <section class="termine-year-overview">
+  <div class="termine-year-header">
+    <div>
+      <span class="termine-section-label">Jahresübersicht</span>
+      <h2>Alle Termine im Jahr <span id="yearOverviewLabel"></span></h2>
+      <p>Hier findet ihr alle eingetragenen Termine des Vereinsjahres auf einen Blick.</p>
+    </div>
 
+    <div class="termine-year-nav">
+      <button type="button" id="prevYear" aria-label="Vorheriges Jahr">
+        <i class="fa-solid fa-chevron-left"></i>
+      </button>
+      <button type="button" id="currentYearButton">Aktuelles Jahr</button>
+      <button type="button" id="nextYear" aria-label="Nächstes Jahr">
+        <i class="fa-solid fa-chevron-right"></i>
+      </button>
+    </div>
+  </div>
+
+  <div class="termine-year-list" id="yearOverviewList"></div>
+</section>
+	
   <!-- footer section -->
 
   <section class="container-fluid footer_section3">
