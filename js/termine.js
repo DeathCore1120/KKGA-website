@@ -241,7 +241,7 @@ const termine = [
   zeit: "Uhrzeit folgt",
   ort: "Vereinshaus Altenritte",
   beschreibung: "Regelmäßiges Vereinstreffen.",
-  bild: "images/Vereinshaus.jpg",
+  bild: "images/Vereinshaus.jpeg",
   status: "open",
   statusText: "Geplant",
   formular: "#"
