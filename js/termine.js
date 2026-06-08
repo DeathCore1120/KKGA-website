@@ -118,7 +118,7 @@ const termine = [
   bild: "images/kreisel.jpg",
   status: "open",
   statusText: "Geplant",
-  formular: "#"
+  formular: "https://forms.gle/7rZhhheTNSgysqix6"
 },
 
 {
@@ -132,7 +132,7 @@ const termine = [
   bild: "images/Vereinshaus.jpg",
   status: "open",
   statusText: "Geplant",
-  formular: "#"
+  formular: "https://forms.gle/7rZhhheTNSgysqix6"
 },
 
 {
@@ -146,7 +146,7 @@ const termine = [
   bild: "images/Vereinshaus.jpg",
   status: "open",
   statusText: "Geplant",
-  formular: "#"
+  formular: "https://forms.gle/7rZhhheTNSgysqix6"
 },
 
 {
@@ -160,7 +160,7 @@ const termine = [
   bild: "images/Vereinshaus.jpg",
   status: "open",
   statusText: "Geplant",
-  formular: "#"
+  formular: "https://forms.gle/7rZhhheTNSgysqix6"
 },
 
 {
@@ -174,7 +174,7 @@ const termine = [
   bild: "images/Vereinshaus.jpg",
   status: "open",
   statusText: "Geplant",
-  formular: "#"
+  formular: "https://forms.gle/7rZhhheTNSgysqix6"
 },
 
 {
@@ -188,7 +188,7 @@ const termine = [
   bild: "images/Fest.jpg",
   status: "open",
   statusText: "Anmeldung offen",
-  formular: "#"
+  formular: "https://forms.gle/7rZhhheTNSgysqix6"
 },
 
 {
@@ -202,7 +202,7 @@ const termine = [
   bild: "images/Vereinshaus.jpg",
   status: "open",
   statusText: "Geplant",
-  formular: "#"
+  formular: "https://forms.gle/7rZhhheTNSgysqix6"
 },
 
 {
@@ -216,7 +216,7 @@ const termine = [
   bild: "images/KGA-Umzug-2024-0.jpeg",
   status: "open",
   statusText: "Geplant",
-  formular: "#"
+  formular: "https://forms.gle/7rZhhheTNSgysqix6"
 },
 
 {
@@ -230,7 +230,7 @@ const termine = [
   bild: "images/Vereinshaus.jpg",
   status: "open",
   statusText: "Geplant",
-  formular: "#"
+  formular: "https://forms.gle/7rZhhheTNSgysqix6"
 },
 
 {
@@ -244,7 +244,7 @@ const termine = [
   bild: "images/Vereinshaus.jpeg",
   status: "open",
   statusText: "Geplant",
-  formular: "#"
+  formular: "https://forms.gle/7rZhhheTNSgysqix6"
 },
 
 {
@@ -258,7 +258,7 @@ const termine = [
   bild: "images/41.jpg",
   status: "open",
   statusText: "Geplant",
-  formular: "#"
+  formular: "https://forms.gle/7rZhhheTNSgysqix6"
 }
 ];
 
