@@ -115,7 +115,7 @@ const termine = [
   zeit: "09:00 Uhr",
   ort: "Kreisel Altenritte",
   beschreibung: "Gemeinsamer Arbeitseinsatz zur Pflege des Kreisels.",
-  bild: "images/Vereinshaus.jpg",
+  bild: "images/kreisel.jpg",
   status: "open",
   statusText: "Geplant",
   formular: "#"
