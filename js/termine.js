@@ -106,7 +106,160 @@ const termine = [
     status: "past",
     statusText: "Beendet",
     formular: ""
-  }
+  },
+  {
+  titel: "Arbeitseinsatz Kreiselpflege",
+  untertitel: "Pflegeeinsatz",
+  start: "2026-06-20",
+  ende: "2026-06-20",
+  zeit: "Uhrzeit folgt",
+  ort: "Kreisel Altenritte",
+  beschreibung: "Gemeinsamer Arbeitseinsatz zur Pflege des Kreisels.",
+  bild: "images/Vereinshaus.jpg",
+  status: "open",
+  statusText: "Geplant",
+  formular: "#"
+},
+
+{
+  titel: "Arbeitseinsatz Kuckucksfest",
+  untertitel: "Vorbereitung",
+  start: "2026-07-18",
+  ende: "2026-07-18",
+  zeit: "Uhrzeit folgt",
+  ort: "Altenritte",
+  beschreibung: "Vorbereitende Arbeiten für das Kuckucksfest.",
+  bild: "images/Vereinshaus.jpg",
+  status: "open",
+  statusText: "Geplant",
+  formular: "#"
+},
+
+{
+  titel: "Parkplatz-Aktion HR4 Radio",
+  untertitel: "Aufbau / Organisation",
+  start: "2026-08-07",
+  ende: "2026-08-07",
+  zeit: "17:00 Uhr",
+  ort: "Altenritte",
+  beschreibung: "Treffen zur Parkplatz-Aktion im Rahmen der HR4-Veranstaltung.",
+  bild: "images/Vereinshaus.jpg",
+  status: "open",
+  statusText: "Geplant",
+  formular: "#"
+},
+
+{
+  titel: "Parkplatz-Aktion HR4 Radio",
+  untertitel: "Aufbau / Organisation",
+  start: "2026-08-08",
+  ende: "2026-08-08",
+  zeit: "17:00 Uhr",
+  ort: "Altenritte",
+  beschreibung: "Treffen zur Parkplatz-Aktion im Rahmen der HR4-Veranstaltung.",
+  bild: "images/Vereinshaus.jpg",
+  status: "open",
+  statusText: "Geplant",
+  formular: "#"
+},
+
+{
+  titel: "Besprechung Kuckucksfest",
+  untertitel: "Einweisung Helfer",
+  start: "2026-08-19",
+  ende: "2026-08-19",
+  zeit: "Uhrzeit folgt",
+  ort: "Vereinshaus Altenritte",
+  beschreibung: "Besprechung und Einweisung aller Helfer für das Kuckucksfest.",
+  bild: "images/Vereinshaus.jpg",
+  status: "open",
+  statusText: "Geplant",
+  formular: "#"
+},
+
+{
+  titel: "Kuckucksfest",
+  untertitel: "Rittahe 2026",
+  start: "2026-08-22",
+  ende: "2026-08-23",
+  zeit: "Details folgen",
+  ort: "Dorfplatz Altenritte",
+  beschreibung: "Das traditionelle Kuckucksfest der Kuckucksgemeinschaft Altenritte.",
+  bild: "images/Dorfplatz Altenritte.jpg",
+  status: "open",
+  statusText: "Anmeldung offen",
+  formular: "#"
+},
+
+{
+  titel: "Nachbesprechung Kuckucksfest",
+  untertitel: "Rückblick",
+  start: "2026-09-09",
+  ende: "2026-09-09",
+  zeit: "Uhrzeit folgt",
+  ort: "Vereinshaus Altenritte",
+  beschreibung: "Gemeinsame Nachbesprechung des Kuckucksfestes.",
+  bild: "images/Vereinshaus.jpg",
+  status: "open",
+  statusText: "Geplant",
+  formular: "#"
+},
+
+{
+  titel: "Großenritter Zeltkirmes",
+  untertitel: "Kirmes und Umzug",
+  start: "2026-09-17",
+  ende: "2026-09-20",
+  zeit: "Details folgen",
+  ort: "Großenritte",
+  beschreibung: "Teilnahme an der Großenritter Zeltkirmes inklusive Festumzug.",
+  bild: "images/KGA-Umzug-2024-0.jpeg",
+  status: "open",
+  statusText: "Geplant",
+  formular: "#"
+},
+
+{
+  titel: "Vereinstreffen",
+  untertitel: "Monatstreffen",
+  start: "2026-10-17",
+  ende: "2026-10-17",
+  zeit: "Uhrzeit folgt",
+  ort: "Vereinshaus Altenritte",
+  beschreibung: "Regelmäßiges Vereinstreffen.",
+  bild: "images/Vereinshaus.jpg",
+  status: "open",
+  statusText: "Geplant",
+  formular: "#"
+},
+
+{
+  titel: "Vereinstreffen",
+  untertitel: "Monatstreffen",
+  start: "2026-11-21",
+  ende: "2026-11-21",
+  zeit: "Uhrzeit folgt",
+  ort: "Vereinshaus Altenritte",
+  beschreibung: "Regelmäßiges Vereinstreffen.",
+  bild: "images/Vereinshaus.jpg",
+  status: "open",
+  statusText: "Geplant",
+  formular: "#"
+},
+
+{
+  titel: "Adventskaffee",
+  untertitel: "Vereinsveranstaltung",
+  start: "2026-11-29",
+  ende: "2026-11-29",
+  zeit: "Uhrzeit folgt",
+  ort: "Vereinshaus Altenritte",
+  beschreibung: "Gemeinsamer Adventskaffee für Mitglieder und Gäste.",
+  bild: "images/Vereinshaus.jpg",
+  status: "open",
+  statusText: "Geplant",
+  formular: "#"
+}
 ];
 
 (function initVereinskalender() {
