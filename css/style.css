@@ -1805,6 +1805,11 @@ main {
   .termine-year-status {
     justify-self: start;
   }
+
+  .termine-admin-hint a {
+    word-break: break-word;
+  }
+	
 }
 
 
