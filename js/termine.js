@@ -255,7 +255,7 @@ const termine = [
   zeit: "Uhrzeit folgt",
   ort: "Vereinshaus Altenritte",
   beschreibung: "Gemeinsamer Adventskaffee für Mitglieder und Gäste.",
-  bild: "images/Vereinshaus.jpg",
+  bild: "images/41.jpg",
   status: "open",
   statusText: "Geplant",
   formular: "#"
