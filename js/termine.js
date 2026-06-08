@@ -414,7 +414,7 @@ const termine = [
         <div class="termine-event-side">
           <img class="termine-event-image" src="${event.bild}" alt="${event.ort}" loading="lazy">
           <div class="termine-event-actions">
-            <a class="termine-button termine-button-dark"href="/calendar/adventskaffee-2026.ics"><i class="fa-solid fa-calendar-plus"></i>In meinen Kalender</a>
+            <a class="termine-button termine-button-dark"href="webcal://www.altenritte.com/calendar/vereinskalender.ics"><i class="fa-solid fa-calendar-plus"></i>Kalender abonnieren</a>
             ${event.formular ? `<a class="termine-button termine-button-yellow" href="${event.formular}" target="_blank" rel="noopener"><i class="fa-solid fa-check"></i> Rückmeldung</a>` : ""}
           </div>
         </div>
