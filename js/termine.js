@@ -257,7 +257,7 @@ const termine = [
   beschreibung: "Gemeinsamer Adventskaffee für Mitglieder und Gäste.",
   bild: "images/41.jpg",
   status: "open",
-  statusText: "Geplant",
+  statusText: "Ungewiss",
   formular: "https://forms.gle/7rZhhheTNSgysqix6"
 }
 ];
