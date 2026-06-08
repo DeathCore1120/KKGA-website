@@ -187,7 +187,7 @@ const termine = [
   beschreibung: "Das traditionelle Kuckucksfest der Kuckucksgemeinschaft Altenritte.",
   bild: "images/Fest.jpg",
   status: "open",
-  statusText: "Anmeldung offen",
+  statusText: "Geplant",
   formular: "https://forms.gle/7rZhhheTNSgysqix6"
 },
 
