@@ -1,1 +1,120 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Kuckucksgemeinschaft Altenritte//Vereinskalender//DE
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:Kuckucksgemeinschaft Altenritte
+X-WR-CALDESC:Vereinstermine der Kuckucksgemeinschaft Altenritte e.V.
+X-WR-TIMEZONE:Europe/Berlin
 
+BEGIN:VEVENT
+UID:arbeitseinsatz-kreiselpflege-2026@altenritte.com
+DTSTAMP:20260608T120000Z
+DTSTART;VALUE=DATE:20260620
+DTEND;VALUE=DATE:20260621
+SUMMARY:Arbeitseinsatz Kreiselpflege
+LOCATION:Kreisel Altenritte
+DESCRIPTION:Gemeinsamer Arbeitseinsatz zur Pflege des Kreisels.
+END:VEVENT
+
+BEGIN:VEVENT
+UID:arbeitseinsatz-kuckucksfest-2026@altenritte.com
+DTSTAMP:20260608T120000Z
+DTSTART;VALUE=DATE:20260718
+DTEND;VALUE=DATE:20260719
+SUMMARY:Arbeitseinsatz Kuckucksfest
+LOCATION:Altenritte
+DESCRIPTION:Vorbereitende Arbeiten für das Kuckucksfest.
+END:VEVENT
+
+BEGIN:VEVENT
+UID:parkplatz-aktion-hr4-2026-08-07@altenritte.com
+DTSTAMP:20260608T120000Z
+DTSTART:20260807T170000
+DTEND:20260807T180000
+SUMMARY:Parkplatz-Aktion HR4 Radio
+LOCATION:Altenritte
+DESCRIPTION:Parkplatz-Aktion HR4 Radio.
+END:VEVENT
+
+BEGIN:VEVENT
+UID:parkplatz-aktion-hr4-2026-08-08@altenritte.com
+DTSTAMP:20260608T120000Z
+DTSTART:20260808T170000
+DTEND:20260808T180000
+SUMMARY:Parkplatz-Aktion HR4 Radio
+LOCATION:Altenritte
+DESCRIPTION:Parkplatz-Aktion HR4 Radio.
+END:VEVENT
+
+BEGIN:VEVENT
+UID:besprechung-einweisung-kuckucksfest-2026@altenritte.com
+DTSTAMP:20260608T120000Z
+DTSTART;VALUE=DATE:20260819
+DTEND;VALUE=DATE:20260820
+SUMMARY:Besprechung und Einweisung Kuckucksfest
+LOCATION:Vereinshaus Altenritte
+DESCRIPTION:Besprechung und Einweisung aller Helfer für das Kuckucksfest.
+END:VEVENT
+
+BEGIN:VEVENT
+UID:kuckucksfest-2026@altenritte.com
+DTSTAMP:20260608T120000Z
+DTSTART;VALUE=DATE:20260822
+DTEND;VALUE=DATE:20260824
+SUMMARY:Kuckucksfest
+LOCATION:Dorfplatz Altenritte
+DESCRIPTION:Kuckucksfest der Kuckucksgemeinschaft Altenritte.
+END:VEVENT
+
+BEGIN:VEVENT
+UID:nachbesprechung-kuckucksfest-2026@altenritte.com
+DTSTAMP:20260608T120000Z
+DTSTART;VALUE=DATE:20260909
+DTEND;VALUE=DATE:20260910
+SUMMARY:Nachbesprechung Kuckucksfest
+LOCATION:Vereinshaus Altenritte
+DESCRIPTION:Gemeinsame Nachbesprechung des Kuckucksfestes.
+END:VEVENT
+
+BEGIN:VEVENT
+UID:grossenritter-zeltkirmes-2026@altenritte.com
+DTSTAMP:20260608T120000Z
+DTSTART;VALUE=DATE:20260917
+DTEND;VALUE=DATE:20260921
+SUMMARY:Großenritter Zeltkirmes und Umzug
+LOCATION:Großenritte
+DESCRIPTION:Teilnahme an der Großenritter Zeltkirmes inklusive Umzug.
+END:VEVENT
+
+BEGIN:VEVENT
+UID:vereinstreffen-oktober-2026@altenritte.com
+DTSTAMP:20260608T120000Z
+DTSTART;VALUE=DATE:20261017
+DTEND;VALUE=DATE:20261018
+SUMMARY:Vereinstreffen
+LOCATION:Vereinshaus Altenritte
+DESCRIPTION:Regelmäßiges Vereinstreffen.
+END:VEVENT
+
+BEGIN:VEVENT
+UID:vereinstreffen-november-2026@altenritte.com
+DTSTAMP:20260608T120000Z
+DTSTART;VALUE=DATE:20261121
+DTEND;VALUE=DATE:20261122
+SUMMARY:Vereinstreffen
+LOCATION:Vereinshaus Altenritte
+DESCRIPTION:Regelmäßiges Vereinstreffen.
+END:VEVENT
+
+BEGIN:VEVENT
+UID:adventskaffee-2026@altenritte.com
+DTSTAMP:20260608T120000Z
+DTSTART;VALUE=DATE:20261129
+DTEND;VALUE=DATE:20261130
+SUMMARY:Adventskaffee
+LOCATION:Vereinshaus Altenritte
+DESCRIPTION:Voraussichtlicher Adventskaffee am 1. Advent.
+END:VEVENT
+
+END:VCALENDAR
