@@ -112,7 +112,7 @@ const termine = [
   untertitel: "Pflegeeinsatz",
   start: "2026-06-20",
   ende: "2026-06-20",
-  zeit: "Uhrzeit folgt",
+  zeit: "09:00 Uhr",
   ort: "Kreisel Altenritte",
   beschreibung: "Gemeinsamer Arbeitseinsatz zur Pflege des Kreisels.",
   bild: "images/Vereinshaus.jpg",
