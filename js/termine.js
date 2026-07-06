@@ -116,8 +116,8 @@ const termine = [
   ort: "Kreisel Altenritte",
   beschreibung: "Gemeinsamer Arbeitseinsatz zur Pflege des Kreisels.",
   bild: "images/kreisel.jpg",
-  status: "open",
-  statusText: "Geplant",
+  status: "past",
+  statusText: "Beendet",
   formular: "https://forms.gle/7rZhhheTNSgysqix6"
 },
 
@@ -126,8 +126,8 @@ const termine = [
   untertitel: "Vorbereitung",
   start: "2026-07-18",
   ende: "2026-07-18",
-  zeit: "Uhrzeit folgt",
-  ort: "Altenritte",
+  zeit: "09:00 Uhr",
+  ort: "Altenritte Feuerwehrhaus",
   beschreibung: "Vorbereitende Arbeiten für das Kuckucksfest.",
   bild: "images/Vereinshaus.jpg",
   status: "open",
