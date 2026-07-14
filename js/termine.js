@@ -127,7 +127,7 @@ const termine = [
   start: "2026-07-18",
   ende: "2026-07-18",
   zeit: "10:00 Uhr",
-  ort: "Altenritte Feuerwehrhaus",
+  ort: "Vereinshaus Altenritte",
   beschreibung: "Vorbereitende Arbeiten für das Kuckucksfest.",
   bild: "images/Vereinshaus.jpg",
   status: "open",
