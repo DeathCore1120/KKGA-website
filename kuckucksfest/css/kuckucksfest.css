@@ -22,3 +22,10 @@
 .hero-content .buttons {
   justify-content: center;
 }
+
+.brand img{
+    width:48px;
+    height:48px;
+    object-fit:contain;
+    flex-shrink:0;
+}
