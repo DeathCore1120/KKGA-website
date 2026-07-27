@@ -16,6 +16,13 @@
 .privacy-note{margin:12px 4px 0;font-size:.8rem;line-height:1.5;color:rgba(0,0,0,.72)}
 .privacy-note strong{font-weight:700}
 
+
+/* Holzdreikampf – Übersicht und aufklappbares Regelwerk */
+.prize-note{margin:22px 0 4px;padding:16px 18px;border-left:5px solid var(--yellow);border-radius:8px;background:rgba(255,255,255,.09);color:#fff}.prize-note strong{color:var(--yellow)}
+.holzdreikampf-actions{margin-top:28px}.rules-overview{padding-top:58px}.rules-heading{max-width:760px;margin-bottom:28px}.rules-heading h3{margin:0 0 10px;font-size:clamp(1.8rem,4vw,3rem);line-height:1.08;text-transform:uppercase}.rules-heading p:last-child{color:rgba(255,255,255,.72)}
+.discipline-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.discipline-card{padding:24px;border:1px solid rgba(255,255,255,.16);border-radius:16px;background:rgba(255,255,255,.045)}.discipline-card h4{margin:10px 0;font-size:1.3rem}.discipline-card p{margin:0 0 18px;color:rgba(255,255,255,.72)}.discipline-card strong{display:block;color:var(--yellow);font-size:.9rem}.discipline-number{color:var(--yellow);font-weight:800;letter-spacing:.12em}
+.rules-details{margin-top:22px;border:1px solid rgba(255,255,255,.2);border-radius:16px;background:rgba(0,0,0,.14);overflow:hidden}.rules-details summary{position:relative;padding:20px 58px 20px 22px;cursor:pointer;font-weight:700;color:#fff;list-style:none}.rules-details summary::-webkit-details-marker{display:none}.rules-details summary:after{content:'+';position:absolute;right:22px;top:50%;transform:translateY(-50%);color:var(--yellow);font-size:1.7rem;line-height:1}.rules-details[open] summary:after{content:'–'}.rules-details[open] summary{border-bottom:1px solid rgba(255,255,255,.16)}.rules-content{display:grid;grid-template-columns:repeat(2,1fr);gap:24px;padding:24px}.rules-content h4{margin:0 0 8px;color:var(--yellow)}.rules-content p,.rules-content li{color:rgba(255,255,255,.75)}.rules-content ul{margin:0 0 10px;padding-left:20px}
+
 @media (max-width:980px){.main-nav{gap:13px}.main-nav a{font-size:.68rem}.split,.feature-grid{gap:38px}.join-grid{grid-template-columns:repeat(2,1fr)}}
 @media (max-width:820px){.menu-button{display:block}.main-nav{position:absolute;left:20px;right:20px;top:82px;display:none;padding:18px;flex-direction:column;align-items:stretch;border-radius:10px;background:var(--dark);box-shadow:var(--shadow)}.main-nav.open{display:flex}.main-nav a{padding:9px;font-size:.8rem}.quicklink-grid{grid-template-columns:repeat(2,1fr)}.split,.feature-grid,.section-head,.schedule-grid,.duck-grid{grid-template-columns:1fr}.section-head{gap:15px}.feature figure img{min-height:390px}.info-grid{grid-template-columns:1fr}.footer-grid{grid-template-columns:1fr 1fr}}
 @media (max-width:590px){.container{width:min(calc(100% - 28px),var(--container))}.site-header{padding:9px 0}.brand{font-size:.82rem}.brand-mark{width:38px}.hero-content{padding:145px 0 75px}.hero h1{font-size:clamp(3.1rem,17vw,5rem)}.quicklink-grid{grid-template-columns:1fr}.quicklink-grid a{min-height:auto;border-left:1px solid var(--line);border-bottom:1px solid var(--line)}.section,.feature,.join{padding:65px 0}.program-row{grid-template-columns:1fr;gap:4px}.video-card video,.duck-grid .media-card img{min-height:340px}.join-grid,.footer-grid{grid-template-columns:1fr}.buttons,.button{width:100%}}
@@ -63,7 +70,11 @@ html,body{max-width:100%;overflow-x:hidden}
   .hero h1{font-size:clamp(2.45rem,12.6vw,3.25rem)}
 }
 
-  </style>
+  
+@media (max-width:820px){.discipline-grid,.rules-content{grid-template-columns:1fr}.rules-overview{padding-top:44px}}
+@media (max-width:590px){.discipline-card{padding:20px}.rules-details summary{padding:18px 52px 18px 18px}.rules-content{padding:19px}.holzdreikampf-actions,.holzdreikampf-actions .button{width:100%}}
+
+</style>
   <link rel="stylesheet" href="css/kuckucksfest.css">
   <link rel="stylesheet" href="css/kuckucksfest-responsive.css">
 </head>
@@ -171,11 +182,75 @@ html,body{max-width:100%;overflow-x:hidden}
         <div>
           <p class="section-label">Samstag · 17:30 Uhr</p>
           <h2>Holzdreikampf</h2>
-          <p class="lead">Beim Holzdreikampf treten Gruppen in kurzweiligen Disziplinen rund um Holz, Geschicklichkeit und Teamgeist gegeneinander an.</p>
-          <p>Ob Verein, Freundeskreis, Nachbarschaft oder Kollegium: Teams mit etwa vier bis sechs Personen können sich vorab anmelden. Der Spaß steht dabei klar im Vordergrund.</p>
-          <ul class="check-list"><li>Teilnahme als Gruppe</li><li>Mehrere unterhaltsame Disziplinen</li><li>Für Vereine, Freunde, Firmen und Nachbarschaften</li></ul>
-          <a class="button button-yellow" href="mailto:kuckucksgemeinschaft@altenritte.com?subject=Anmeldung%20Holzdreikampf%202026">Gruppe anmelden</a>
+          <p class="lead">Vier Personen. Drei Disziplinen. Ein gemeinsames Ziel.</p>
+          <p>Beim Holzdreikampf treten Viererteams im Nageln, Baumstammziehen und Maßkrughalten gegeneinander an. Gefragt sind Teamgeist, Geschicklichkeit und Kraft. Für jede Disziplin werden Punkte vergeben. Das Team mit der höchsten Gesamtpunktzahl gewinnt.</p>
+          <p class="prize-note"><strong>Siegerpreis:</strong> Ein Getränkemeter eigener Wahl.</p>
+          <ul class="check-list">
+            <li>Feste Teamgröße: 4 Personen</li>
+            <li>Drei abwechslungsreiche Disziplinen</li>
+            <li>Bei Punktgleichheit entscheidet ein Maßkrug-Stechen</li>
+          </ul>
+          <div class="holzdreikampf-actions">
+            <a class="button button-yellow" href="mailto:kuckucksgemeinschaft@altenritte.com?subject=Anmeldung%20Holzdreikampf%202026">Viererteam anmelden</a>
+          </div>
         </div>
+      </div>
+
+      <div class="container rules-overview">
+        <div class="rules-heading">
+          <p class="section-label">Weitere Informationen</p>
+          <h3>Disziplinen und Regeln im Überblick</h3>
+          <p>Hier finden interessierte Teams alle wichtigen Informationen direkt auf der Website.</p>
+        </div>
+
+        <div class="discipline-grid">
+          <article class="discipline-card">
+            <span class="discipline-number">01</span>
+            <h4>Nageln</h4>
+            <p>Eine zuvor bestimmte Person versucht, einen Nagel mit einem Zimmermannshammer möglichst tief in einen Baumstumpf einzuschlagen.</p>
+            <strong>Maximal 10 Schläge</strong>
+          </article>
+          <article class="discipline-card">
+            <span class="discipline-number">02</span>
+            <h4>Baumstammziehen</h4>
+            <p>Alle vier Teammitglieder ziehen den Baumstamm gemeinsam bis zum Wendepunkt und wieder zurück. Für das sichere Drehen wird die Zeit angehalten.</p>
+            <strong>Schnellste Gesamtzeit gewinnt</strong>
+          </article>
+          <article class="discipline-card">
+            <span class="discipline-number">03</span>
+            <h4>Maßkrughalten</h4>
+            <p>Eine andere Person als beim Nageln hält einen gefüllten Maßkrug mit ausgestrecktem Arm. Sobald der Arm deutlich absinkt oder der Krug abgesetzt wird, endet der Versuch.</p>
+            <strong>Längste Haltedauer gewinnt</strong>
+          </article>
+        </div>
+
+        <details class="rules-details">
+          <summary>Vollständige Wettkampfregeln anzeigen</summary>
+          <div class="rules-content">
+            <div>
+              <h4>Teamaufstellung</h4>
+              <p>Ein Team besteht aus vier Personen. Für das Nageln und das Maßkrughalten wird jeweils eine Person bestimmt. Diese beiden Disziplinen müssen von unterschiedlichen Teammitgliedern bestritten werden. Beim Baumstammziehen treten alle vier gemeinsam an.</p>
+            </div>
+            <div>
+              <h4>Punktewertung</h4>
+              <ul>
+                <li>1. Platz: 10 Punkte</li>
+                <li>2. Platz: 8 Punkte</li>
+                <li>3. Platz: 6 Punkte</li>
+                <li>Ab dem 4. Platz: 0 Punkte</li>
+              </ul>
+              <p>Je nach Anzahl der angemeldeten Teams kann die Punktevergabe angepasst werden.</p>
+            </div>
+            <div>
+              <h4>Stechen bei Punktgleichheit</h4>
+              <p>Sind nach allen drei Disziplinen zwei oder mehr Teams punktgleich, benennt jedes betroffene Team eine Person für ein Stechen im Maßkrughalten. Die längste Haltedauer entscheidet über den Gesamtsieg.</p>
+            </div>
+            <div>
+              <h4>Hinweise zum Ablauf</h4>
+              <p>Beim Nageln kann die Zahl der Schläge abhängig von der Teamanzahl von zehn auf fünf reduziert werden. Beim Baumstammziehen zählt die Zeit für Hin- und Rückweg; das sichere Drehen am Wendepunkt wird nicht gewertet.</p>
+            </div>
+          </div>
+        </details>
       </div>
     </section>
 
