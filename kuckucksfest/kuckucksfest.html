@@ -23,18 +23,49 @@
 @media (max-width:590px){.taufe-actions,.taufe-actions .button{width:100%}}
   
 
+/* Mobile overflow and safe-area fixes */
+html,body{max-width:100%;overflow-x:hidden}
+.site-header{padding-top:max(15px,env(safe-area-inset-top));padding-left:env(safe-area-inset-left);padding-right:env(safe-area-inset-right)}
+.nav-wrap,.brand,.brand>span:last-child,.hero-content{min-width:0}
+.brand{flex:1 1 auto;max-width:calc(100% - 64px)}
+.brand>span:last-child{overflow-wrap:anywhere}
+.menu-button{flex:0 0 auto}
+.hero-content{width:100%;padding-left:max(0px,env(safe-area-inset-left));padding-right:max(0px,env(safe-area-inset-right))}
+.hero h1{max-width:100%;overflow-wrap:anywhere;word-break:normal}
+.hero-copy,.eyebrow,.date{max-width:100%;overflow-wrap:anywhere}
+
+@media (max-width:590px){
+  .container{width:min(calc(100% - 32px),var(--container))}
+  .site-header{padding-top:max(9px,env(safe-area-inset-top))}
+  .nav-wrap{min-height:56px;gap:10px}
+  .brand{gap:9px;font-size:clamp(.68rem,3.4vw,.82rem);line-height:1.08;max-width:calc(100% - 58px)}
+  .brand small{font-size:.92em}
+  .brand-mark{width:38px;min-width:38px;font-size:1.05rem}
+  .menu-button{width:48px;height:48px}
+  .main-nav{left:16px;right:16px;top:calc(74px + env(safe-area-inset-top))}
+  .hero{min-height:100svh}
+  .hero-content{padding:calc(128px + env(safe-area-inset-top)) 0 max(56px,calc(42px + env(safe-area-inset-bottom)))}
+  .eyebrow{font-size:clamp(.62rem,2.8vw,.74rem);line-height:1.45;letter-spacing:.11em}
+  .hero h1{font-size:clamp(2.7rem,13.2vw,4.2rem);line-height:.96;letter-spacing:-.055em}
+  .hero-copy{font-size:clamp(1rem,4.7vw,1.18rem);line-height:1.5}
+  .date{font-size:1.05rem}
+  .buttons{margin-top:22px}
+  .button{padding-inline:18px;text-align:center;white-space:normal}
+  .section h2,.feature h2,.join h2{font-size:clamp(2.15rem,11vw,3.5rem);overflow-wrap:anywhere}
+}
+
+@media (max-width:380px){
+  .container{width:min(calc(100% - 24px),var(--container))}
+  .brand{font-size:.67rem;gap:7px}
+  .brand-mark{width:34px;min-width:34px}
+  .menu-button{width:44px;height:44px;padding-inline:8px}
+  .hero-content{padding-top:calc(116px + env(safe-area-inset-top))}
+  .hero h1{font-size:clamp(2.45rem,12.6vw,3.25rem)}
+}
+
   </style>
   <link rel="stylesheet" href="css/kuckucksfest.css">
   <link rel="stylesheet" href="css/kuckucksfest-responsive.css">
-  <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-9Q8LDWPR8Y"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-9Q8LDWPR8Y');
-</script>
 </head>
 <body>
   <header class="site-header" id="top">
@@ -47,16 +78,12 @@
         <span></span><span></span><span></span><b>Menü</b>
       </button>
       <nav class="main-nav" id="main-nav" aria-label="Seitennavigation">
-
-    <a href="../index.html" class="nav-cta">← Zur Homepage</a>
-
-    <a href="#programm">Programm</a>
-    <a href="#holzdreikampf">Holzdreikampf</a>
-    <a href="#taufe">Kuckuckstaufe</a>
-    <a href="#entenrennen">Entenrennen</a>
-    <a href="#mitmachen" class="nav-cta">Mitmachen</a>
-
-</nav>
+        <a href="#programm">Programm</a>
+        <a href="#holzdreikampf">Holzdreikampf</a>
+        <a href="#taufe">Kuckuckstaufe</a>
+        <a href="#entenrennen">Entenrennen</a>
+        <a href="#mitmachen" class="nav-cta">Mitmachen</a>
+      </nav>
     </div>
   </header>
 
